@@ -29,7 +29,7 @@ const NavbarWrapper = styled.nav`
   }
 
   .navbar--logo {
-    width: 6.5rem;
+    width: 7rem;
     letter-spacing: -1px;
 
     font-size: var(--font-md-3);
@@ -63,7 +63,7 @@ const NavbarWrapper = styled.nav`
   }
 
   .navbar--social-container {
-    width: 6.5rem;
+    width: 7rem;
   }
 
   .navbar--social-container > a {
