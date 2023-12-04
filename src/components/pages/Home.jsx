@@ -1,42 +1,33 @@
 import styled from "styled-components";
-import { FaJava } from "react-icons/fa";
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-import { RiReactjsFill } from "react-icons/ri";
+
 import { SiIntellijidea } from "react-icons/si";
-import { TbBrandVscode } from "react-icons/tb";
-import { FaGithub } from "react-icons/fa";
-import { SiPostman } from "react-icons/si";
 
-const HomeWrapper = styled.div`
+import pfp from "../../assets/imgs/pfp.jpg";
+import HtmlIcon from "../icons/HtmlIcon";
+import CssIcon from "../icons/CssIcon";
+import JavascriptIcon from "../icons/JavascriptIcon";
+import ReactIcon from "../icons/ReactIcon";
+import NodeIcon from "../icons/NodeIcon";
+import JavaIcon from "../icons/JavaIcon";
+import GithubIcon from "../icons/GithubIcon";
+import VsCodeIcon from "../icons/VsCodeIcon";
+import PostmanIcon from "../icons/PostmanIcon";
+
+const HomeWrapper = styled.section`
   position: relative;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 
   background-color: var(--color-secondary);
   color: var(--color-black);
 
-  padding: 4rem 2rem;
+  display: grid;
+  place-items: center;
+  row-gap: 10rem;
+
+  padding: 6rem 2rem;
 
   overflow-y: scroll;
 
-  .temp {
-    background-color: purple;
-
-    flex-shrink: 0;
-
-    width: 30rem;
-    height: 30rem;
-    border-radius: 1000px;
-  }
-
   .home--hero {
-    position: relative;
-
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -54,6 +45,15 @@ const HomeWrapper = styled.div`
 
     font-size: var(--font-sm-3);
     text-align: center;
+  }
+
+  .home--hero > img {
+    width: 30rem;
+    height: 30rem;
+
+    object-fit: cover;
+
+    border-radius: 50%;
   }
 
   .home--skills > header,
@@ -81,7 +81,9 @@ const HomeWrapper = styled.div`
   }
 
   @media (min-width: 822px) {
-    flex-direction: column;
+    row-gap: 2rem;
+
+    padding: 4rem 2rem;
 
     .home--hero {
       flex-direction: row;
@@ -112,10 +114,6 @@ const Home = () => {
   return (
     <HomeWrapper>
       <section className="home--hero">
-        {/* <img
-          src={pfp}
-          alt="Profile picture"
-        /> */}
         <section className="home--hero-text">
           <p>Hi, I&apos;m Elias!</p>
           <p>
@@ -123,56 +121,59 @@ const Home = () => {
             LeetCode.
           </p>
         </section>
-        <div className="temp"></div>
+        <img
+          src={pfp}
+          alt="Profile picture"
+        />
       </section>
       <section className="home--skill-set">
         <section className="home--skills">
           <header>Skills</header>
           <div>
-            <FaHtml5
-              size={40}
-              color={"var(--color-html-icon)"}
+            <HtmlIcon
+              width="4rem"
+              height="4rem"
             />
-            <FaCss3Alt
-              size={40}
-              color={"var(--color-css-icon)"}
+            <CssIcon
+              width="4rem"
+              height="4rem"
             />
-            <IoLogoJavascript
-              size={40}
-              color={"var(--color-js-icon)"}
+            <JavascriptIcon
+              width="4rem"
+              height="4rem"
             />
-            <RiReactjsFill
-              size={40}
-              color={"var(--color-react-icon)"}
+            <ReactIcon
+              width="4rem"
+              height="4rem"
             />
-            <FaNodeJs
-              size={40}
-              color={"var(--color-node-icon)"}
+            <NodeIcon
+              width="4rem"
+              height="4rem"
             />
-            <FaJava
-              size={40}
-              color={"var(--color-java-icon)"}
+            <JavaIcon
+              width="4rem"
+              height="4rem"
             />
           </div>
         </section>
         <section className="home--tools">
           <header>Tools</header>
           <div>
-            <FaGithub
-              size={38}
-              color={"var(--color-github-icon)"}
+            <GithubIcon
+              width="4rem"
+              height="4rem"
             />
-            <TbBrandVscode
-              size={40}
-              color={"var(--color-vscode-icon)"}
+            <VsCodeIcon
+              width="4rem"
+              height="4rem"
             />
             <SiIntellijidea
               size={35}
               color={"var(--color-intellij-icon)"}
             />
-            <SiPostman
-              size={38}
-              color={"var(--color-postman-icon)"}
+            <PostmanIcon
+              width="4rem"
+              height="4rem"
             />
           </div>
         </section>

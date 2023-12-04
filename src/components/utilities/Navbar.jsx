@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const NavbarWrapper = styled.nav`
   position: relative;
@@ -55,20 +54,10 @@ const NavbarWrapper = styled.nav`
     background-color: var(--color-primary-2);
   }
 
-  .navbar--main-container,
-  .navbar--social-container {
+  .navbar--main-container {
     display: flex;
     align-items: center;
     gap: 2rem;
-  }
-
-  .navbar--social-container {
-    width: 7rem;
-  }
-
-  .navbar--social-container > a {
-    display: grid;
-    place-items: center;
   }
 
   @media (min-width: 767px) {
@@ -98,20 +87,6 @@ const Navbar = () => {
           end>
           Contact
         </NavLink>
-      </div>
-      <div className="navbar--social-container">
-        <a
-          href="https://github.com/sailecodes"
-          target="_blank"
-          rel="noopener noreferrer">
-          <FaGithub size={25} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/elias-roman-38440028b/"
-          target="_blank"
-          rel="noopener noreferrer">
-          <FaLinkedin size={25} />
-        </a>
       </div>
     </NavbarWrapper>
   );
