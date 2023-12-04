@@ -92,6 +92,8 @@ const ProjectItemWrapper = styled.section`
   .project-item--description {
     color: var(--color-quad);
 
+    width: 44.5rem;
+
     font-size: var(--font-sm-3);
     text-align: center;
 
@@ -110,11 +112,27 @@ const ProjectItemWrapper = styled.section`
 
     font-size: var(--font-sm-3);
   }
+
+  @media (min-width: 822px) {
+    flex-direction: row-reverse;
+
+    .project-item--information header {
+      align-items: flex-start;
+    }
+
+    .project-item--description {
+      text-align: left;
+    }
+
+    .project-item--links {
+      justify-content: flex-start;
+    }
+  }
 `;
 
-const ProjectItem = ({ name, skills, description, links, img }) => {
+const ProjectItem = ({ isImgOnLeft, name, skills, description, links, img }) => {
   return (
-    <ProjectItemWrapper>
+    <ProjectItemWrapper style={{}}>
       <div className="temp-pic"></div>
       <div className="project-item--information">
         <header>

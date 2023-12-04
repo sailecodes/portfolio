@@ -32,8 +32,6 @@ const HomeWrapper = styled.main`
     flex-direction: column-reverse;
     align-items: center;
     gap: 1.5rem;
-
-    /* height: 100vh; */
   }
 
   .home--hero-text > p:nth-child(1) {
