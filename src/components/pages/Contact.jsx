@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import GithubIcon from "../icons/GithubIcon";
-import LinkedInIcon from "../icons/LinkedInIcon";
+import { MdEmail } from "react-icons/md";
+import { MdLocalPhone } from "react-icons/md";
 
 const ContactWrapper = styled.section`
   background-color: var(--color-secondary);
@@ -25,16 +25,26 @@ const ContactWrapper = styled.section`
     font-size: var(--font-sm-3);
   }
 
-  .contact--texts,
-  .contact--socials {
+  .contact--texts {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+
     gap: 5rem;
   }
 
-  .contact--socials {
-    gap: 3rem;
+  .contact--email,
+  .contact--number {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  @media (min-width: 822px) {
+    .contact--texts {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
   }
 `;
 
@@ -43,27 +53,19 @@ const Contact = () => {
     <ContactWrapper>
       <div className="contact--texts">
         <div className="contact--email">
-          <p>Email</p>
-          <p>eliasiv.codes@gmail.com</p>
+          <MdEmail size={40} />
+          <div>
+            <p>Email</p>
+            <p>eliasiv.codes@gmail.com</p>
+          </div>
         </div>
         <div className="contact--number">
-          <p>Phone number</p>
-          <p>1 (714)-721-7244</p>
+          <MdLocalPhone size={40} />
+          <div>
+            <p>Phone number</p>
+            <p>1 (714)-721-7244</p>
+          </div>
         </div>
-      </div>
-      <div className="contact--socials">
-        <a>
-          <GithubIcon
-            width="4rem"
-            height="4rem"
-          />
-        </a>
-        <a>
-          <LinkedInIcon
-            width="4rem"
-            height="4rem"
-          />
-        </a>
       </div>
     </ContactWrapper>
   );

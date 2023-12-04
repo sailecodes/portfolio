@@ -17,7 +17,7 @@ const HomeWrapper = styled.section`
   position: relative;
 
   background-color: var(--color-secondary);
-  color: var(--color-black);
+  color: var(--color-tertiary);
 
   display: grid;
   place-items: center;
@@ -41,6 +41,8 @@ const HomeWrapper = styled.section`
   }
 
   .home--hero-text > p:last-child {
+    color: var(--color-quad);
+
     width: 44.5rem;
 
     font-size: var(--font-sm-3);
