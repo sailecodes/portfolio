@@ -113,6 +113,10 @@ const ProjectItemWrapper = styled.section`
     font-size: var(--font-sm-3);
   }
 
+  .dot-separator {
+    font-size: 2rem;
+  }
+
   @media (min-width: 822px) {
     flex-direction: row-reverse;
 
@@ -138,8 +142,11 @@ const ProjectItem = ({ isImgOnLeft, name, skills, description, links, img }) => 
         <header>
           <p className="project-item--name">{name}</p>
           <div className="project-item--skills">
-            {skills.map((skill) => (
-              <p key={name + skill}>{skill}</p>
+            {skills.map((skill, ind) => (
+              <>
+                {ind !== 0 && <div className="dot-separator">&middot;</div>}
+                <p key={name + skill}>{skill}</p>
+              </>
             ))}
           </div>
         </header>
