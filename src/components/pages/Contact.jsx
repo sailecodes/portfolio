@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { MdEmail } from "react-icons/md";
 import { MdLocalPhone } from "react-icons/md";
 
-const ContactWrapper = styled.section`
+const ContactWrapper = styled.main`
   background-color: var(--color-secondary);
   color: var(--color-tertiary);
 

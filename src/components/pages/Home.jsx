@@ -13,7 +13,7 @@ import GithubIcon from "../icons/GithubIcon";
 import VsCodeIcon from "../icons/VsCodeIcon";
 import PostmanIcon from "../icons/PostmanIcon";
 
-const HomeWrapper = styled.section`
+const HomeWrapper = styled.main`
   position: relative;
 
   background-color: var(--color-secondary);
@@ -32,6 +32,8 @@ const HomeWrapper = styled.section`
     flex-direction: column-reverse;
     align-items: center;
     gap: 1.5rem;
+
+    /* height: 100vh; */
   }
 
   .home--hero-text > p:nth-child(1) {
@@ -166,8 +168,8 @@ const Home = () => {
               height="4rem"
             />
             <VsCodeIcon
-              width="4rem"
-              height="4rem"
+              width="4.4rem"
+              height="4.4rem"
             />
             <SiIntellijidea
               size={35}
