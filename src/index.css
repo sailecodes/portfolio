@@ -3,11 +3,8 @@
 /* ============================================== */
 
 :root {
-  --color-primary-4: #18122b;
-  --color-primary-3: #393053;
-  --color-primary-2: #443c68;
-  --color-primary-1: #635985;
-  --color-primary-0: #827a9d;
+  --color-primary: #fff;
+  --color-secondary: #f9f9f9;
 
   --color-black: #0a0a0a;
   --color-white: #f5f5f5;
@@ -71,7 +68,8 @@ input:focus {
 /* ============================================== */
 
 a {
-  color: var(--color-white);
+  color: var(--color-black);
+
   font-family: inherit;
   text-decoration: none;
 }
@@ -106,10 +104,11 @@ button:hover,
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background-color: var(--color-darker-gray);
+  /* background-color: var(--color-secondary); */
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--color-dark-gray);
+  /* background: var(--color-black); */
+  /* border-radius: 10px; */
 }

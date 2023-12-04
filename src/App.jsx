@@ -2,7 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Projects from "./components/pages/Projects";
 import Layout from "./components/pages/Layout";
-import Connect from "./components/pages/Connect";
+import Contact from "./components/pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +18,8 @@ const router = createBrowserRouter([
         element: <Projects />,
       },
       {
-        path: "/connect",
-        element: <Connect />,
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

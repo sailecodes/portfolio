@@ -5,8 +5,8 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 const NavbarWrapper = styled.nav`
   position: relative;
 
-  background-color: var(--color-primary-4);
-  color: var(--color-white);
+  background-color: var(--color-primary);
+  color: var(--color-black);
 
   grid-row: 1;
 
@@ -18,19 +18,22 @@ const NavbarWrapper = styled.nav`
   padding: 0 2rem;
 
   a {
-    font-size: var(--font-sm-1);
+    font-size: var(--font-sm-3);
+    font-weight: 500;
   }
 
   a.active {
-    color: var(--color-primary-0);
+    color: var(--color-blue);
 
     font-weight: 600;
   }
 
-  p {
-    font-size: var(--font-md-2);
-
+  .navbar--logo {
     width: 6.5rem;
+    letter-spacing: -1px;
+
+    font-size: var(--font-md-3);
+    font-weight: 500;
   }
 
   > a:last-child {
@@ -78,7 +81,7 @@ const NavbarWrapper = styled.nav`
 const Navbar = () => {
   return (
     <NavbarWrapper>
-      <p>IV</p>
+      <p className="navbar--logo">elias</p>
       <div className="navbar--main-container">
         <NavLink
           to="/"
@@ -90,19 +93,24 @@ const Navbar = () => {
           end>
           Projects
         </NavLink>
+        <NavLink
+          to="/contact"
+          end>
+          Contact
+        </NavLink>
       </div>
       <div className="navbar--social-container">
         <a
           href="https://github.com/sailecodes"
           target="_blank"
           rel="noopener noreferrer">
-          <FaGithub size={21} />
+          <FaGithub size={25} />
         </a>
         <a
           href="https://www.linkedin.com/in/elias-roman-38440028b/"
           target="_blank"
           rel="noopener noreferrer">
-          <FaLinkedin size={21} />
+          <FaLinkedin size={25} />
         </a>
       </div>
     </NavbarWrapper>

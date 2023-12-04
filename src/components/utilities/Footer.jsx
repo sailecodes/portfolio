@@ -3,8 +3,6 @@ import styled from "styled-components";
 const FooterWrapper = styled.footer`
   grid-row: 3;
 
-  background-color: var(--color-primary-4);
-
   display: flex;
   align-items: center;
   justify-content: center;

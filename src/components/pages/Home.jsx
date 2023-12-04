@@ -1,81 +1,97 @@
 import styled from "styled-components";
 
-import pp from "../../assets/imgs/luffy.jpg";
-
 const HomeWrapper = styled.div`
   position: relative;
 
-  background-color: var(--color-primary-3);
+  background-color: var(--color-secondary);
+  color: var(--color-black);
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  padding: 4rem 2rem;
 
-  padding: 2rem;
-
-  .home--content-container {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .home--content-container > img {
-    max-width: 100%;
-    height: auto;
-    clip-path: circle(50%);
-  }
-
-  .home--text-container > p:nth-child(1) {
-    font-size: var(--font-lg-4);
-    font-weight: 600;
-  }
-
-  .home--text-container > p:last-child {
-    font-size: var(--font-sm-3);
-  }
+  overflow-y: scroll;
 
   .temp {
     background-color: purple;
-    width: 20rem;
-    height: 20rem;
+
+    flex-shrink: 0;
+
+    width: 30rem;
+    height: 30rem;
     border-radius: 1000px;
   }
 
-  @media (min-width: 767px) {
-    justify-content: center;
+  .home--hero {
+    position: relative;
 
-    .home--content-container {
-      flex-direction: row;
-    }
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.5rem;
 
-    .temp {
-      width: 25rem;
-      height: 25rem;
-    }
+    margin-bottom: 10rem;
   }
 
-  @media (min-width: 1264px) {
+  .home--hero-text > p:nth-child(1) {
+    font-size: var(--font-heading);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .home--hero-text > p:last-child {
+    width: 44.5rem;
+
+    font-size: var(--font-sm-3);
+    text-align: center;
+  }
+
+  @media (min-width: 822px) {
+    .home--hero {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .home--hero-text > p:nth-child(1) {
+      font-size: var(--font-heading);
+      font-weight: 600;
+      text-align: left;
+    }
+
+    .home--hero-text > p:last-child {
+      width: 44.5rem;
+
+      font-size: var(--font-sm-3);
+      text-align: left;
+    }
+
+    .home--hero-text > p:last-child {
+      /* width: 44.5rem; */
+    }
   }
 `;
 
 const Home = () => {
   return (
     <HomeWrapper>
-      <div className="home--content-container">
+      <section className="home--hero">
         {/* <img
-          src={pp}
+          src={pfp}
           alt="Profile picture"
         /> */}
+        <section className="home--hero-text">
+          <p>Hi, I&apos;m Elias!</p>
+          <p>
+            I&apos;m an aspiring software engineer who loves to create full-stack applications and be terrible at
+            LeetCode.
+          </p>
+        </section>
         <div className="temp"></div>
-        <div className="home--text-container">
-          <p>Main heading</p>
-          <p>Sub heading.</p>
+      </section>
+      <section className="home--skills">
+        <heading>Skills</heading>
+        <div>
+          <p></p>
         </div>
-      </div>
+      </section>
     </HomeWrapper>
   );
 };

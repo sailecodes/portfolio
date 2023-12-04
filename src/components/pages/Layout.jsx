@@ -2,11 +2,10 @@ import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 
 import Navbar from "../utilities/Navbar";
-import Footer from "../utilities/Footer";
 
 const LayoutWrapper = styled.div`
   display: grid;
-  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-rows: 5rem 1fr;
 
   height: 100vh;
 
@@ -22,7 +21,6 @@ const Layout = () => {
     <LayoutWrapper>
       <Navbar />
       <Outlet />
-      <Footer />
     </LayoutWrapper>
   );
 };
