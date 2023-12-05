@@ -6,18 +6,14 @@ const ProjectsWrapper = styled.main`
 
   display: grid;
   place-items: center;
-  gap: 10rem;
+  row-gap: 10rem;
 
   padding: 6rem 2rem;
 
   overflow-y: scroll;
 
   @media (min-width: 830px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15rem;
+    row-gap: 15rem;
   }
 `;
 
