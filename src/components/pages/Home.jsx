@@ -22,6 +22,7 @@ const HomeWrapper = styled.main`
 
   display: grid;
   place-items: center;
+  row-gap: 7rem;
 
   padding: 6rem 2rem;
 
