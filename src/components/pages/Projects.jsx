@@ -4,14 +4,21 @@ const ProjectsWrapper = styled.main`
   background-color: var(--color-secondary);
   color: var(--color-tertiary);
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  place-items: center;
   gap: 10rem;
 
   padding: 6rem 2rem;
 
   overflow-y: scroll;
+
+  @media (min-width: 822px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+  }
 `;
 
 const Projects = () => {
@@ -43,6 +50,7 @@ const Projects = () => {
       {projects.map((project, ind) => (
         <ProjectItem
           key={ind}
+          isImgOnLeft={ind % 2 !== 0 ? true : false}
           {...project}
         />
       ))}
@@ -51,10 +59,12 @@ const Projects = () => {
 };
 
 const ProjectItemWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  .project-item--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 
   .temp-pic {
     background-color: purple;
@@ -92,7 +102,7 @@ const ProjectItemWrapper = styled.section`
   .project-item--description {
     color: var(--color-quad);
 
-    width: 44.5rem;
+    width: 40rem;
 
     font-size: var(--font-sm-3);
     text-align: center;
@@ -118,13 +128,22 @@ const ProjectItemWrapper = styled.section`
   }
 
   @media (min-width: 822px) {
-    flex-direction: row-reverse;
+    .project-item--container {
+      flex-direction: row-reverse;
+      gap: 6rem;
+    }
+
+    .project-item--container.reversed {
+      flex-direction: row;
+    }
 
     .project-item--information header {
       align-items: flex-start;
     }
 
     .project-item--description {
+      width: 35rem;
+
       text-align: left;
     }
 
@@ -136,31 +155,33 @@ const ProjectItemWrapper = styled.section`
 
 const ProjectItem = ({ isImgOnLeft, name, skills, description, links, img }) => {
   return (
-    <ProjectItemWrapper style={{}}>
-      <div className="temp-pic"></div>
-      <div className="project-item--information">
-        <header>
-          <p className="project-item--name">{name}</p>
-          <div className="project-item--skills">
-            {skills.map((skill, ind) => (
-              <>
-                {ind !== 0 && <div className="dot-separator">&middot;</div>}
-                <p key={name + skill}>{skill}</p>
-              </>
+    <ProjectItemWrapper>
+      <div className={`project-item--container ${isImgOnLeft ? "reversed" : ""}`}>
+        <div className="temp-pic"></div>
+        <div className="project-item--information">
+          <header>
+            <p className="project-item--name">{name}</p>
+            <div className="project-item--skills">
+              {skills.map((skill, ind) => (
+                <>
+                  {ind !== 0 && <div className="dot-separator">&middot;</div>}
+                  <p key={name + skill}>{skill}</p>
+                </>
+              ))}
+            </div>
+          </header>
+          <p className="project-item--description">{description}</p>
+          <div className="project-item--links">
+            {links.map((link) => (
+              <a
+                key={link.link}
+                href={link.link}
+                target="_blank"
+                rel="noopener noreferrer">
+                {link.name}
+              </a>
             ))}
           </div>
-        </header>
-        <p className="project-item--description">{description}</p>
-        <div className="project-item--links">
-          {links.map((link) => (
-            <a
-              key={link.link}
-              href={link.link}
-              target="_blank"
-              rel="noopener noreferrer">
-              {link.name}
-            </a>
-          ))}
         </div>
       </div>
     </ProjectItemWrapper>

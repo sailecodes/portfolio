@@ -83,7 +83,12 @@ const HomeWrapper = styled.main`
   }
 
   @media (min-width: 822px) {
-    row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15rem;
 
     padding: 4rem 2rem;
 
