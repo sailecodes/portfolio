@@ -39,7 +39,7 @@ const ContactWrapper = styled.main`
     gap: 1rem;
   }
 
-  @media (min-width: 822px) {
+  @media (min-width: 768px) {
     .contact--texts {
       flex-direction: row;
       align-items: center;

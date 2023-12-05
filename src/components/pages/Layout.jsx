@@ -9,9 +9,6 @@ const LayoutWrapper = styled.div`
   grid-template-rows: 5rem 1fr 5rem;
 
   height: 100vh;
-
-  @media (min-width: 822px) {
-  }
 `;
 
 const Layout = () => {

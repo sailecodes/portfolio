@@ -12,6 +12,7 @@ import JavaIcon from "../icons/JavaIcon";
 import GithubIcon from "../icons/GithubIcon";
 import VsCodeIcon from "../icons/VsCodeIcon";
 import PostmanIcon from "../icons/PostmanIcon";
+import useScreenSize from "../../hooks/useScreenSize";
 
 const HomeWrapper = styled.main`
   position: relative;
@@ -21,7 +22,6 @@ const HomeWrapper = styled.main`
 
   display: grid;
   place-items: center;
-  row-gap: 10rem;
 
   padding: 6rem 2rem;
 
@@ -35,7 +35,7 @@ const HomeWrapper = styled.main`
   }
 
   .home--hero-text > p:nth-child(1) {
-    font-size: var(--font-heading);
+    font-size: var(--font-lg-4);
     font-weight: 700;
     text-align: center;
   }
@@ -43,15 +43,15 @@ const HomeWrapper = styled.main`
   .home--hero-text > p:last-child {
     color: var(--color-quad);
 
-    width: 44.5rem;
+    width: 30rem;
 
-    font-size: var(--font-sm-3);
+    font-size: var(--font-sm-2);
     text-align: center;
   }
 
   .home--hero > img {
-    width: 30rem;
-    height: 30rem;
+    width: 25rem;
+    height: 25rem;
 
     object-fit: cover;
 
@@ -60,7 +60,7 @@ const HomeWrapper = styled.main`
 
   .home--skills > header,
   .home--tools > header {
-    font-size: var(--font-md-1);
+    font-size: var(--font-sm-4);
     text-align: center;
 
     margin-bottom: 1.5rem;
@@ -82,7 +82,31 @@ const HomeWrapper = styled.main`
     gap: 5rem;
   }
 
-  @media (min-width: 822px) {
+  @media (min-width: 510px) {
+    row-gap: 10rem;
+
+    .home--hero-text > p:nth-child(1) {
+      font-size: var(--font-heading);
+    }
+
+    .home--hero-text > p:last-child {
+      width: 44.5rem;
+
+      font-size: var(--font-sm-3);
+    }
+
+    .home--hero > img {
+      width: 30rem;
+      height: 30rem;
+    }
+
+    .home--skills > header,
+    .home--tools > header {
+      font-size: var(--font-md-1);
+    }
+  }
+
+  @media (min-width: 830px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,6 +142,8 @@ const HomeWrapper = styled.main`
 `;
 
 const Home = () => {
+  const screenSize = useScreenSize();
+
   return (
     <HomeWrapper>
       <section className="home--hero">
@@ -138,28 +164,28 @@ const Home = () => {
           <header>Skills</header>
           <div>
             <HtmlIcon
-              width="4rem"
-              height="4rem"
+              width={screenSize.width < 510 ? "3rem" : "4rem"}
+              height={screenSize.width < 510 ? "3rem" : "4rem"}
             />
             <CssIcon
-              width="4rem"
-              height="4rem"
+              width={screenSize.width < 510 ? "3rem" : "4rem"}
+              height={screenSize.width < 510 ? "3rem" : "4rem"}
             />
             <JavascriptIcon
-              width="4rem"
-              height="4rem"
+              width={screenSize.width < 510 ? "3rem" : "4rem"}
+              height={screenSize.width < 510 ? "3rem" : "4rem"}
             />
             <ReactIcon
-              width="4rem"
-              height="4rem"
+              width={screenSize.width < 510 ? "3rem" : "4rem"}
+              height={screenSize.width < 510 ? "3rem" : "4rem"}
             />
             <NodeIcon
-              width="4rem"
-              height="4rem"
+              width={screenSize.width < 510 ? "3rem" : "4rem"}
+              height={screenSize.width < 510 ? "3rem" : "4rem"}
             />
             <JavaIcon
-              width="4rem"
-              height="4rem"
+              width={screenSize.width < 510 ? "3rem" : "4rem"}
+              height={screenSize.width < 510 ? "3rem" : "4rem"}
             />
           </div>
         </section>
@@ -167,20 +193,20 @@ const Home = () => {
           <header>Tools</header>
           <div>
             <GithubIcon
-              width="4rem"
-              height="4rem"
+              width={screenSize.width < 510 ? "3rem" : "4rem"}
+              height={screenSize.width < 510 ? "3rem" : "4rem"}
             />
             <VsCodeIcon
-              width="4.4rem"
-              height="4.4rem"
+              width={screenSize.width < 510 ? "3.4rem" : "4.4rem"}
+              height={screenSize.width < 510 ? "3.4rem" : "4.4rem"}
             />
             <SiIntellijidea
-              size={35}
+              size={screenSize.width < 510 ? 28 : 35}
               color={"var(--color-intellij-icon)"}
             />
             <PostmanIcon
-              width="4rem"
-              height="4rem"
+              width={screenSize.width < 510 ? "3rem" : "4rem"}
+              height={screenSize.width < 510 ? "3rem" : "4rem"}
             />
           </div>
         </section>

@@ -12,7 +12,7 @@ const ProjectsWrapper = styled.main`
 
   overflow-y: scroll;
 
-  @media (min-width: 822px) {
+  @media (min-width: 830px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,8 +69,8 @@ const ProjectItemWrapper = styled.section`
   .temp-pic {
     background-color: purple;
 
-    width: 35rem;
-    height: 35rem;
+    width: 25rem;
+    height: 25rem;
 
     border-radius: 10px;
   }
@@ -84,7 +84,7 @@ const ProjectItemWrapper = styled.section`
   }
 
   .project-item--name {
-    font-size: var(--font-md-3);
+    font-size: var(--font-md-2);
     font-weight: 600;
   }
 
@@ -95,16 +95,16 @@ const ProjectItemWrapper = styled.section`
   }
 
   .project-item--skills > p {
-    font-size: var(--font-sm-4);
+    font-size: var(--font-sm-3);
     font-weight: 500;
   }
 
   .project-item--description {
     color: var(--color-quad);
 
-    width: 40rem;
+    width: 30rem;
 
-    font-size: var(--font-sm-3);
+    font-size: var(--font-sm-2);
     text-align: center;
 
     margin-bottom: 1.5rem;
@@ -120,14 +120,39 @@ const ProjectItemWrapper = styled.section`
   .project-item--links > a {
     color: var(--color-blue);
 
-    font-size: var(--font-sm-3);
+    font-size: var(--font-sm-2);
   }
 
   .dot-separator {
     font-size: 2rem;
   }
 
-  @media (min-width: 822px) {
+  @media (min-width: 510px) {
+    .temp-pic {
+      width: 35rem;
+      height: 35rem;
+    }
+
+    .project-item--name {
+      font-size: var(--font-md-3);
+    }
+
+    .project-item--skills > p {
+      font-size: var(--font-sm-4);
+    }
+
+    .project-item--description {
+      width: 40rem;
+
+      font-size: var(--font-sm-3);
+    }
+
+    .project-item--links > a {
+      font-size: var(--font-sm-3);
+    }
+  }
+
+  @media (min-width: 830px) {
     .project-item--container {
       flex-direction: row-reverse;
       gap: 6rem;
