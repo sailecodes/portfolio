@@ -10,7 +10,6 @@ import JavaIcon from "../icons/JavaIcon";
 import GithubIcon from "../icons/GithubIcon";
 import VsCodeIcon from "../icons/VsCodeIcon";
 import PostmanIcon from "../icons/PostmanIcon";
-import useScreenSize from "../../hooks/useScreenSize";
 
 import styled from "styled-components";
 const HomeWrapper = styled.main`

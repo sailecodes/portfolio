@@ -14,22 +14,22 @@ const ContactWrapper = styled.main`
 
   padding: 4rem 2rem;
 
+  .contact--container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5rem;
+  }
+
   p:nth-child(1) {
-    font-size: var(--font-sm-4);
+    font-size: 2rem;
     font-weight: 500;
   }
 
   p:nth-child(2) {
     color: var(--color-gray);
 
-    font-size: var(--font-sm-2);
-  }
-
-  .contact--texts {
-    display: flex;
-    flex-direction: column;
-
-    gap: 5rem;
+    font-size: 1.4rem;
   }
 
   .contact--email,
@@ -39,46 +39,30 @@ const ContactWrapper = styled.main`
     gap: 1rem;
   }
 
+  .contact--email svg,
+  .contact--number svg {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
   @media (min-width: 510px) {
-    background-color: var(--color-main-bg);
-    color: var(--color-black);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-
-    padding: 4rem 2rem;
-
     p:nth-child(1) {
-      font-size: var(--font-md-1);
-      font-weight: 500;
+      font-size: 2.2rem;
     }
 
     p:nth-child(2) {
-      color: var(--color-gray);
-
-      font-size: var(--font-sm-3);
+      font-size: 1.6rem;
     }
 
-    .contact--texts {
-      display: flex;
-      flex-direction: column;
-
-      gap: 5rem;
-    }
-
-    .contact--email,
-    .contact--number {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+    .contact--email svg,
+    .contact--number svg {
+      width: 3.6rem;
+      height: 3.6rem;
     }
   }
 
-  @media (min-width: 768px) {
-    .contact--texts {
+  @media (min-width: 860px) {
+    .contact--container {
       flex-direction: row;
       align-items: center;
       justify-content: center;
@@ -89,16 +73,16 @@ const ContactWrapper = styled.main`
 const Contact = () => {
   return (
     <ContactWrapper>
-      <div className="contact--texts">
+      <div className="contact--container">
         <div className="contact--email">
-          <MdEmail size={40} />
+          <MdEmail />
           <div>
             <p>Email</p>
             <p>eliasiv.codes@gmail.com</p>
           </div>
         </div>
         <div className="contact--number">
-          <MdLocalPhone size={40} />
+          <MdLocalPhone />
           <div>
             <p>Phone number</p>
             <p>1 (714)-721-7244</p>
