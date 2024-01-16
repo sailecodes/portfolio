@@ -53,8 +53,8 @@ const HomeWrapper = styled.main`
   }
 
   .home--hero > img {
-    width: 26rem;
-    height: 26rem;
+    width: 28rem;
+    height: 28rem;
 
     object-fit: cover;
 
@@ -108,8 +108,8 @@ const HomeWrapper = styled.main`
     }
 
     .home--hero > img {
-      width: 30rem;
-      height: 30rem;
+      width: 32rem;
+      height: 32rem;
     }
 
     .home--skills > header,

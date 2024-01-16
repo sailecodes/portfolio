@@ -1,9 +1,17 @@
 const projects = [
   {
+    name: "Shoe Szn",
+    skills: ["MongoDB", "Express", "React", "Node"],
+    description: "An e-commerce website that provides consumers with shoes handpicked by the community",
+    links: [
+      { name: "Github", link: "#" },
+      { name: "Visit", link: "#" },
+    ],
+  },
+  {
     name: "InstaIV",
     skills: ["MongoDB", "Express", "React", "Node"],
-    description:
-      "A basic social media app inspired by Instagram where users are able to enjoy the core aspects of such apps in their simplicity.",
+    description: "A social media application based on Instagram's design and basic functionalities",
     links: [
       { name: "Github", link: "https://github.com/sailecodes/instaiv" },
       { name: "Visit", link: "#" },
@@ -12,8 +20,7 @@ const projects = [
   {
     name: "TodoIV",
     skills: ["MongoDB", "Express", "React", "Node"],
-    description:
-      "A todo app for keeping track of different tasks, ultimately providing users with a sense of organization and accountability.",
+    description: "A to-do list application for organizing various tasks",
     links: [
       { name: "Github", link: "https://github.com/sailecodes/todo" },
       { name: "Visit", link: "#" },

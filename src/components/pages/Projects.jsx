@@ -156,6 +156,7 @@ const ProjectItem = ({ isImgOnLeft, name, skills, description, links, img }) => 
   return (
     <ProjectItemWrapper>
       <div className={`project-item--container ${isImgOnLeft ? "reversed" : ""}`}>
+        {/* <img src="" alt="" /> */}
         <div className="temp-pic"></div>
         <div className="project-item--information">
           <header>
