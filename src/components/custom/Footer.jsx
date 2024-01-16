@@ -9,9 +9,13 @@ const FooterWrapper = styled.footer`
   display: grid;
   place-items: center;
 
+  font-size: var(--font-footer-text-sm);
   font-weight: 600;
 
-  @media (min-width: 767px) {
+  padding: 0 2rem;
+
+  @media (min-width: 510px) {
+    font-size: var(--font-footer-text-lg);
   }
 `;
 

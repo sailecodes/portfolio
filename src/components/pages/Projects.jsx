@@ -2,8 +2,8 @@ import styled from "styled-components";
 import projects from "../../data/projects";
 
 const ProjectsWrapper = styled.main`
-  background-color: var(--color-secondary);
-  color: var(--color-tertiary);
+  background-color: var(--color-main-bg);
+  color: var(--color-black);
 
   display: grid;
   place-items: center;
@@ -74,7 +74,7 @@ const ProjectItemWrapper = styled.section`
   }
 
   .project-item--description {
-    color: var(--color-quad);
+    color: var(--color-gray);
 
     width: 30rem;
 

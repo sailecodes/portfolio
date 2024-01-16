@@ -3,8 +3,8 @@ import { MdEmail } from "react-icons/md";
 import { MdLocalPhone } from "react-icons/md";
 
 const ContactWrapper = styled.main`
-  background-color: var(--color-secondary);
-  color: var(--color-tertiary);
+  background-color: var(--color-main-bg);
+  color: var(--color-black);
 
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@ const ContactWrapper = styled.main`
   }
 
   p:nth-child(2) {
-    color: var(--color-quad);
+    color: var(--color-gray);
 
     font-size: var(--font-sm-2);
   }
@@ -40,8 +40,8 @@ const ContactWrapper = styled.main`
   }
 
   @media (min-width: 510px) {
-    background-color: var(--color-secondary);
-    color: var(--color-tertiary);
+    background-color: var(--color-main-bg);
+    color: var(--color-black);
 
     display: flex;
     flex-direction: column;
@@ -57,7 +57,7 @@ const ContactWrapper = styled.main`
     }
 
     p:nth-child(2) {
-      color: var(--color-quad);
+      color: var(--color-gray);
 
       font-size: var(--font-sm-3);
     }

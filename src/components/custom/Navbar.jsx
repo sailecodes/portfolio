@@ -6,7 +6,7 @@ const NavbarWrapper = styled.nav`
 
   position: relative;
 
-  background-color: var(--color-primary);
+  background-color: var(--color-white);
   color: var(--color-black);
 
   display: flex;
@@ -19,7 +19,7 @@ const NavbarWrapper = styled.nav`
   .navbar--logo {
     letter-spacing: -1px;
 
-    font-size: var(--font-md-3);
+    font-size: var(--font-nav-logo-sm);
     font-weight: 500;
   }
 
@@ -30,7 +30,7 @@ const NavbarWrapper = styled.nav`
   }
 
   a {
-    font-size: var(--font-sm-3);
+    font-size: var(--font-nav-link-sm);
     font-weight: 500;
   }
 
@@ -40,13 +40,13 @@ const NavbarWrapper = styled.nav`
     font-weight: 600;
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 510px) {
     .navbar--logo {
-      font-size: var(--font-lg-1);
+      font-size: var(--font-nav-logo-lg);
     }
 
     a {
-      font-size: var(--font-sm-4);
+      font-size: var(--font-nav-link-lg);
     }
   }
 `;

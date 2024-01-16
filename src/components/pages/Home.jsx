@@ -1,5 +1,3 @@
-import styled from "styled-components";
-
 import { SiIntellijidea } from "react-icons/si";
 
 import pfp from "../../assets/imgs/pfp.jpg";
@@ -14,15 +12,18 @@ import VsCodeIcon from "../icons/VsCodeIcon";
 import PostmanIcon from "../icons/PostmanIcon";
 import useScreenSize from "../../hooks/useScreenSize";
 
+import styled from "styled-components";
 const HomeWrapper = styled.main`
   position: relative;
 
-  background-color: var(--color-secondary);
-  color: var(--color-tertiary);
+  background-color: var(--color-main-bg);
+  color: var(--color-black);
 
-  display: grid;
-  place-items: center;
-  row-gap: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
 
   padding: 6rem 2rem;
 
@@ -36,32 +37,42 @@ const HomeWrapper = styled.main`
   }
 
   .home--hero-text > p:nth-child(1) {
-    font-size: var(--font-lg-4);
-    font-weight: 700;
+    color: var(--color-black);
+
+    font-size: var(--font-home-hero-header-sm);
+    font-weight: 600;
     text-align: center;
   }
 
   .home--hero-text > p:last-child {
-    color: var(--color-quad);
+    color: var(--color-gray);
 
-    width: 30rem;
+    max-width: 44.5rem;
 
-    font-size: var(--font-sm-2);
+    font-size: var(--font-home-hero-description-sm);
     text-align: center;
   }
 
   .home--hero > img {
-    width: 25rem;
-    height: 25rem;
+    width: 26rem;
+    height: 26rem;
 
     object-fit: cover;
 
     border-radius: 50%;
   }
 
+  .home--set {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+
   .home--skills > header,
   .home--tools > header {
-    font-size: var(--font-sm-4);
+    font-size: var(--font-home-skills-header-sm);
     text-align: center;
 
     margin-bottom: 1.5rem;
@@ -75,25 +86,26 @@ const HomeWrapper = styled.main`
     gap: 2.5rem;
   }
 
-  .home--skill-set {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
+  .home--skills svg,
+  .home--tools svg {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .home--tools > div svg:nth-child(2) {
+    width: 3.8rem;
+    height: 3.8rem;
   }
 
   @media (min-width: 510px) {
-    row-gap: 10rem;
-
     .home--hero-text > p:nth-child(1) {
-      font-size: var(--font-heading);
+      font-size: var(--font-home-hero-header-lg);
     }
 
     .home--hero-text > p:last-child {
       width: 44.5rem;
 
-      font-size: var(--font-sm-3);
+      font-size: var(--font-home-hero-description-lg);
     }
 
     .home--hero > img {
@@ -103,34 +115,36 @@ const HomeWrapper = styled.main`
 
     .home--skills > header,
     .home--tools > header {
-      font-size: var(--font-md-1);
+      font-size: var(--font-home-skills-header-lg);
+    }
+
+    .home--skills svg,
+    .home--tools svg {
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+
+    .home--tools > div svg:nth-child(2) {
+      width: 4.2rem;
+      height: 4.2rem;
     }
   }
 
-  @media (min-width: 830px) {
-    row-gap: 15rem;
-
-    padding: 4rem 2rem;
-
+  @media (min-width: 860px) {
     .home--hero {
       flex-direction: row;
       justify-content: center;
     }
 
     .home--hero-text > p:nth-child(1) {
-      font-size: var(--font-heading);
-      font-weight: 600;
       text-align: left;
     }
 
     .home--hero-text > p:last-child {
-      width: 44.5rem;
-
-      font-size: var(--font-sm-3);
       text-align: left;
     }
 
-    .home--skill-set {
+    .home--set {
       flex-direction: row;
       gap: 10rem;
     }
@@ -138,16 +152,13 @@ const HomeWrapper = styled.main`
 `;
 
 const Home = () => {
-  const screenSize = useScreenSize();
-
   return (
     <HomeWrapper>
       <section className="home--hero">
         <section className="home--hero-text">
           <p>Hi, I&apos;m Elias!</p>
           <p>
-            I&apos;m an aspiring software engineer who loves to create full-stack applications and be terrible at
-            LeetCode.
+            I&apos;m an aspiring software engineer who loves to tackle challenges and create innovative applications.
           </p>
         </section>
         <img
@@ -155,55 +166,25 @@ const Home = () => {
           alt="Profile picture"
         />
       </section>
-      <section className="home--skill-set">
+      <section className="home--set">
         <section className="home--skills">
           <header>Skills</header>
           <div>
-            <HtmlIcon
-              width={screenSize.width < 510 ? "3rem" : "4rem"}
-              height={screenSize.width < 510 ? "3rem" : "4rem"}
-            />
-            <CssIcon
-              width={screenSize.width < 510 ? "3rem" : "4rem"}
-              height={screenSize.width < 510 ? "3rem" : "4rem"}
-            />
-            <JavascriptIcon
-              width={screenSize.width < 510 ? "3rem" : "4rem"}
-              height={screenSize.width < 510 ? "3rem" : "4rem"}
-            />
-            <ReactIcon
-              width={screenSize.width < 510 ? "3rem" : "4rem"}
-              height={screenSize.width < 510 ? "3rem" : "4rem"}
-            />
-            <NodeIcon
-              width={screenSize.width < 510 ? "3rem" : "4rem"}
-              height={screenSize.width < 510 ? "3rem" : "4rem"}
-            />
-            <JavaIcon
-              width={screenSize.width < 510 ? "3rem" : "4rem"}
-              height={screenSize.width < 510 ? "3rem" : "4rem"}
-            />
+            <HtmlIcon />
+            <CssIcon />
+            <JavascriptIcon />
+            <ReactIcon />
+            <NodeIcon />
+            <JavaIcon />
           </div>
         </section>
         <section className="home--tools">
           <header>Tools</header>
           <div>
-            <GithubIcon
-              width={screenSize.width < 510 ? "3rem" : "4rem"}
-              height={screenSize.width < 510 ? "3rem" : "4rem"}
-            />
-            <VsCodeIcon
-              width={screenSize.width < 510 ? "3.4rem" : "4.4rem"}
-              height={screenSize.width < 510 ? "3.4rem" : "4.4rem"}
-            />
-            <SiIntellijidea
-              size={screenSize.width < 510 ? 28 : 35}
-              color={"var(--color-intellij-icon)"}
-            />
-            <PostmanIcon
-              width={screenSize.width < 510 ? "3rem" : "4rem"}
-              height={screenSize.width < 510 ? "3rem" : "4rem"}
-            />
+            <GithubIcon />
+            <VsCodeIcon />
+            <SiIntellijidea />
+            <PostmanIcon />
           </div>
         </section>
       </section>
