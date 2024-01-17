@@ -193,15 +193,18 @@ const ProjectItem = ({ isImgOnLeft, name, skills, description, links, img }) => 
           </header>
           <p className="project-item--description">{description}</p>
           <div className="project-item--links">
-            {links.map((link) => (
-              <a
-                key={link.link}
-                href={link.link}
-                target="_blank"
-                rel="noopener noreferrer">
-                {link.name}
-              </a>
-            ))}
+            {links.map((link) => {
+              if (link.link === "#") return <></>;
+              return (
+                <a
+                  key={name + link.link}
+                  href={link.link}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  {link.name}
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
