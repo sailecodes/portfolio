@@ -40,13 +40,25 @@ const ProjectItemWrapper = styled.section`
     gap: 1rem;
   }
 
-  .temp-pic {
+  .project-item--img-container {
     background-color: purple;
 
-    width: 25rem;
-    height: 25rem;
+    width: 32rem;
+    height: 32rem;
 
     border-radius: 10px;
+
+    overflow: hidden;
+  }
+
+  .project-item--img-container img {
+    width: 32rem;
+    height: 32rem;
+
+    scale: 1;
+
+    /* object-position: 0 0; */
+    object-fit: cover;
   }
 
   .project-item--information header {
@@ -102,9 +114,14 @@ const ProjectItemWrapper = styled.section`
   }
 
   @media (min-width: 510px) {
-    .temp-pic {
-      width: 35rem;
-      height: 35rem;
+    .project-item--img-container {
+      width: 36rem;
+      height: 36rem;
+    }
+
+    .project-item--img-container img {
+      width: 36rem;
+      height: 36rem;
     }
 
     .project-item--name {
@@ -156,8 +173,12 @@ const ProjectItem = ({ isImgOnLeft, name, skills, description, links, img }) => 
   return (
     <ProjectItemWrapper>
       <div className={`project-item--container ${isImgOnLeft ? "reversed" : ""}`}>
-        {/* <img src="" alt="" /> */}
-        <div className="temp-pic"></div>
+        <div className="project-item--img-container">
+          <img
+            src={img}
+            alt=""
+          />
+        </div>
         <div className="project-item--information">
           <header>
             <p className="project-item--name">{name}</p>

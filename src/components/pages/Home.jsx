@@ -35,7 +35,7 @@ const HomeWrapper = styled.main`
     gap: 1.5rem;
   }
 
-  .home--hero-text > p:nth-child(1) {
+  .home--hero-text-header {
     color: var(--color-black);
 
     font-size: var(--font-home-hero-header-sm);
@@ -43,22 +43,47 @@ const HomeWrapper = styled.main`
     text-align: center;
   }
 
-  .home--hero-text > p:last-child {
+  .home--hero-text-description {
     color: var(--color-gray);
 
     max-width: 44.5rem;
 
     font-size: var(--font-home-hero-description-sm);
     text-align: center;
+
+    margin-bottom: 1rem;
   }
 
-  .home--hero > img {
+  .home--hero-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .home--hero-links a {
+    color: var(--color-blue);
+
+    font-size: var(--font-home-hero-link-sm);
+  }
+
+  .home--img-container {
+    width: 28rem;
+    height: 28rem;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+  }
+
+  .home--img-container > img {
     width: 28rem;
     height: 28rem;
 
     object-fit: cover;
+    object-position: -6px -155px;
 
-    border-radius: 50%;
+    scale: 2;
   }
 
   .home--set {
@@ -97,19 +122,34 @@ const HomeWrapper = styled.main`
   }
 
   @media (min-width: 510px) {
-    .home--hero-text > p:nth-child(1) {
+    .home--hero-text-header {
       font-size: var(--font-home-hero-header-lg);
     }
 
-    .home--hero-text > p:last-child {
+    .home--hero-text-description {
       width: 44.5rem;
 
       font-size: var(--font-home-hero-description-lg);
     }
 
-    .home--hero > img {
+    .home--hero-links a {
+      font-size: var(--font-home-hero-link-lg);
+    }
+
+    .home--img-container {
       width: 32rem;
       height: 32rem;
+
+      border-radius: 50%;
+
+      overflow: hidden;
+    }
+
+    .home--img-container > img {
+      width: 32rem;
+      height: 32rem;
+
+      object-position: -6px -180px;
     }
 
     .home--skills > header,
@@ -135,12 +175,16 @@ const HomeWrapper = styled.main`
       justify-content: center;
     }
 
-    .home--hero-text > p:nth-child(1) {
+    .home--hero-text-header {
       text-align: left;
     }
 
-    .home--hero-text > p:last-child {
+    .home--hero-text-description {
       text-align: left;
+    }
+
+    .home--hero-links {
+      justify-content: flex-start;
     }
 
     .home--set {
@@ -155,26 +199,42 @@ const Home = () => {
     <HomeWrapper>
       <section className="home--hero">
         <section className="home--hero-text">
-          <p>Hi, I&apos;m Elias!</p>
-          <p>
+          <header className="home--hero-text-header">Hi, I&apos;m Elias!</header>
+          <p className="home--hero-text-description">
             I&apos;m an aspiring software engineer who loves to tackle challenges and create innovative applications.
           </p>
+          <div className="home--hero-links">
+            <a
+              href="https://github.com/sailecodes"
+              target="_blank"
+              rel="noopener noreferrer">
+              Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/elias-iv-roman/"
+              target="_blank"
+              rel="noopener noreferrer">
+              LinkedIn
+            </a>
+          </div>
         </section>
-        <img
-          src={pfp}
-          alt="Profile picture"
-        />
+        <div className="home--img-container">
+          <img
+            src={pfp}
+            alt="Profile picture"
+          />
+        </div>
       </section>
       <section className="home--set">
         <section className="home--skills">
           <header>Skills</header>
           <div>
+            <JavaIcon />
             <HtmlIcon />
             <CssIcon />
             <JavascriptIcon />
             <ReactIcon />
             <NodeIcon />
-            <JavaIcon />
           </div>
         </section>
         <section className="home--tools">
