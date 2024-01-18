@@ -78,7 +78,7 @@ const Contact = () => {
           <MdEmail />
           <div>
             <p>Email</p>
-            <p>eliasiv.codes@gmail.com</p>
+            <p>eliasiv.roman@gmail.com</p>
           </div>
         </div>
         <div className="contact--number">
