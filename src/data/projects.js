@@ -1,7 +1,3 @@
-import shoeszn1 from "../assets/imgs/shoe-szn-pic-1.png";
-import instaiv1 from "../assets/imgs/instaiv-pic-1.png";
-import todoiv1 from "../assets/imgs/todoiv-pic-1.png";
-
 const projects = [
   {
     date: "CURRENT",
@@ -13,7 +9,6 @@ const projects = [
       { name: "Github", link: "https://github.com/sailecodes/shoe-szn" },
       { name: "Visit", link: "#" },
     ],
-    img: shoeszn1,
   },
   {
     date: "NOVEMBER 2023",
@@ -26,7 +21,6 @@ const projects = [
       { name: "Github", link: "https://github.com/sailecodes/instaiv" },
       { name: "Visit", link: "https://instaiv.up.railway.app/" },
     ],
-    img: instaiv1,
   },
   {
     date: "OCTOBER 2023",
@@ -39,7 +33,6 @@ const projects = [
       { name: "Github", link: "https://github.com/sailecodes/todoiv" },
       { name: "Visit", link: "#" },
     ],
-    img: todoiv1,
   },
   {
     date: "DECEMBER 2022",
@@ -52,7 +45,6 @@ const projects = [
       { name: "Github", link: "https://github.com/CSE-110-Winter-2022/birds-of-a-feather-team-29" },
       { name: "Visit", link: "#" },
     ],
-    img: todoiv1,
   },
 ];
 
