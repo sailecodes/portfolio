@@ -7,61 +7,83 @@ const ProjectsWrapper = styled.main`
 
   display: grid;
   place-items: center;
-  row-gap: 10rem;
 
-  padding: 6rem 2rem;
+  padding: 8rem 2rem;
 
   overflow-y: scroll;
 
+  .projects--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects--line {
+    background-color: var(--color-gray);
+
+    width: 1px;
+    height: 12rem;
+
+    margin: 3rem 0;
+  }
+
   @media (min-width: 830px) {
-    row-gap: 15rem;
+    .projects--line-container {
+      display: grid;
+      place-items: center;
+
+      width: 2.5rem;
+    }
+
+    .projects--container {
+      align-items: flex-start;
+    }
   }
 `;
 
 const Projects = () => {
   return (
     <ProjectsWrapper>
-      {projects.map((project, ind) => (
-        <ProjectItem
-          key={ind}
-          isImgOnLeft={ind % 2 !== 0 ? true : false}
-          {...project}
-        />
-      ))}
+      <div className="projects--container">
+        {projects.map((project, ind) => (
+          <>
+            <ProjectItem
+              key={ind}
+              {...project}
+            />
+            {ind !== projects.length - 1 && (
+              <div className="projects--line-container">
+                <div className="projects--line"></div>
+              </div>
+            )}
+          </>
+        ))}
+      </div>
     </ProjectsWrapper>
   );
 };
 
 const ProjectItemWrapper = styled.section`
+  .project-item--date p {
+    color: var(--color-gray);
+
+    font-size: var(--font-projects-date-sm);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 3px;
+
+    margin-bottom: 1rem;
+  }
+
   .project-item--container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+
+    width: 30rem;
   }
 
-  .project-item--img-container {
-    background-color: purple;
-
-    width: 32rem;
-    height: 32rem;
-
-    border-radius: 10px;
-
-    overflow: hidden;
-  }
-
-  .project-item--img-container img {
-    width: 32rem;
-    height: 32rem;
-
-    scale: 1;
-
-    /* object-position: 0 0; */
-    object-fit: cover;
-  }
-
-  .project-item--information header {
+  .project-item--container header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,18 +92,20 @@ const ProjectItemWrapper = styled.section`
   }
 
   .project-item--name {
-    font-size: var(--font-md-2);
+    font-size: var(--font-projects-name-sm);
     font-weight: 600;
   }
 
   .project-item--skills {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
+    gap: 0 0.5rem;
   }
 
   .project-item--skills > p {
-    font-size: var(--font-sm-3);
+    font-size: var(--font-projects-skills-sm);
     font-weight: 500;
   }
 
@@ -90,7 +114,7 @@ const ProjectItemWrapper = styled.section`
 
     width: 30rem;
 
-    font-size: var(--font-sm-2);
+    font-size: var(--font-projects-description-sm);
     text-align: center;
 
     margin-bottom: 1.5rem;
@@ -106,7 +130,7 @@ const ProjectItemWrapper = styled.section`
   .project-item--links > a {
     color: var(--color-blue);
 
-    font-size: var(--font-sm-2);
+    font-size: var(--font-projects-link-sm);
   }
 
   .dot-separator {
@@ -114,51 +138,71 @@ const ProjectItemWrapper = styled.section`
   }
 
   @media (min-width: 510px) {
-    .project-item--img-container {
-      width: 36rem;
-      height: 36rem;
+    .project-item--date p {
+      font-size: var(--font-projects-date-lg);
     }
 
-    .project-item--img-container img {
-      width: 36rem;
-      height: 36rem;
+    .project-item--container {
+      width: unset;
     }
 
     .project-item--name {
-      font-size: var(--font-md-3);
+      font-size: var(--font-projects-name-lg);
     }
 
     .project-item--skills > p {
-      font-size: var(--font-sm-4);
+      font-size: var(--font-projects-skills-lg);
     }
 
     .project-item--description {
       width: 40rem;
 
-      font-size: var(--font-sm-3);
+      font-size: var(--font-projects-description-lg);
     }
 
     .project-item--links > a {
-      font-size: var(--font-sm-3);
+      font-size: var(--font-projects-link-lg);
     }
   }
 
   @media (min-width: 830px) {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    .project-item--date {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .project-item--date div {
+      background-color: var(--color-black);
+
+      width: 1px;
+      height: 10px;
+    }
+
+    .project-item--date p {
+      font-weight: 600;
+      letter-spacing: 9px;
+      writing-mode: vertical-lr;
+
+      transform: rotate(180deg);
+
+      margin-bottom: 0;
+    }
+
     .project-item--container {
-      flex-direction: row-reverse;
-      gap: 6rem;
+      align-items: flex-start;
     }
 
-    .project-item--container.reversed {
-      flex-direction: row;
-    }
-
-    .project-item--information header {
+    .project-item--container header {
       align-items: flex-start;
     }
 
     .project-item--description {
-      width: 35rem;
+      width: 45rem;
 
       text-align: left;
     }
@@ -169,43 +213,39 @@ const ProjectItemWrapper = styled.section`
   }
 `;
 
-const ProjectItem = ({ isImgOnLeft, name, skills, description, links, img }) => {
+const ProjectItem = ({ date, name, skills, description, explanation, links }) => {
   return (
     <ProjectItemWrapper>
-      <div className={`project-item--container ${isImgOnLeft ? "reversed" : ""}`}>
-        <div className="project-item--img-container">
-          <img
-            src={img}
-            alt=""
-          />
-        </div>
-        <div className="project-item--information">
-          <header>
-            <p className="project-item--name">{name}</p>
-            <div className="project-item--skills">
-              {skills.map((skill, ind) => (
-                <>
-                  {ind !== 0 && <div className="dot-separator">&middot;</div>}
-                  <p key={name + skill}>{skill}</p>
-                </>
-              ))}
-            </div>
-          </header>
-          <p className="project-item--description">{description}</p>
-          <div className="project-item--links">
-            {links.map((link) => {
-              if (link.link === "#") return <></>;
-              return (
-                <a
-                  key={name + link.link}
-                  href={link.link}
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  {link.name}
-                </a>
-              );
-            })}
+      <div className="project-item--date">
+        <p>{date}</p>
+      </div>
+      <div className="project-item--container">
+        <header>
+          <p className="project-item--name">{name}</p>
+          <div className="project-item--skills">
+            {skills.map((skill, ind) => (
+              <>
+                {ind !== 0 && <div className="dot-separator">&middot;</div>}
+                <p key={name + skill}>{skill}</p>
+              </>
+            ))}
           </div>
+        </header>
+        <p className="project-item--description">{description}</p>
+        <p className="project-item--description">{explanation}</p>
+        <div className="project-item--links">
+          {links.map((link) => {
+            if (link.link === "#") return <></>;
+            return (
+              <a
+                key={name + link.link}
+                href={link.link}
+                target="_blank"
+                rel="noopener noreferrer">
+                {link.name}
+              </a>
+            );
+          })}
         </div>
       </div>
     </ProjectItemWrapper>

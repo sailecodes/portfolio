@@ -22,14 +22,14 @@ const ContactWrapper = styled.main`
   }
 
   p:nth-child(1) {
-    font-size: 2rem;
+    font-size: var(--font-contact-name-sm);
     font-weight: 500;
   }
 
   p:nth-child(2) {
     color: var(--color-gray);
 
-    font-size: 1.4rem;
+    font-size: var(--font-contact-information-sm);
   }
 
   .contact--email,
@@ -47,11 +47,11 @@ const ContactWrapper = styled.main`
 
   @media (min-width: 510px) {
     p:nth-child(1) {
-      font-size: 2.2rem;
+      font-size: var(--font-contact-name-lg);
     }
 
     p:nth-child(2) {
-      font-size: 1.6rem;
+      font-size: var(--font-contact-information-lg);
     }
 
     .contact--email svg,

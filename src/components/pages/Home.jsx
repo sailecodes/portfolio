@@ -18,15 +18,20 @@ const HomeWrapper = styled.main`
   background-color: var(--color-main-bg);
   color: var(--color-black);
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20rem;
+  display: grid;
+  place-items: center;
+  gap: 5rem;
 
-  padding: 6rem 2rem;
+  padding: 8rem 2rem;
 
   overflow-y: scroll;
+
+  .home--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+  }
 
   .home--hero {
     display: flex;
@@ -122,6 +127,10 @@ const HomeWrapper = styled.main`
   }
 
   @media (min-width: 510px) {
+    .home--container {
+      gap: 12rem;
+    }
+
     .home--hero-text-header {
       font-size: var(--font-home-hero-header-lg);
     }
@@ -173,6 +182,7 @@ const HomeWrapper = styled.main`
     .home--hero {
       flex-direction: row;
       justify-content: center;
+      gap: 3.5rem;
     }
 
     .home--hero-text-header {
@@ -197,56 +207,59 @@ const HomeWrapper = styled.main`
 const Home = () => {
   return (
     <HomeWrapper>
-      <section className="home--hero">
-        <section className="home--hero-text">
-          <header className="home--hero-text-header">Hi, I&apos;m Elias!</header>
-          <p className="home--hero-text-description">
-            I&apos;m an aspiring software engineer who loves to tackle challenges and create innovative applications.
-          </p>
-          <div className="home--hero-links">
-            <a
-              href="https://github.com/sailecodes"
-              target="_blank"
-              rel="noopener noreferrer">
-              Github
-            </a>
-            <a
-              href="https://www.linkedin.com/in/elias-iv-roman/"
-              target="_blank"
-              rel="noopener noreferrer">
-              LinkedIn
-            </a>
+      <div className="home--container">
+        <section className="home--hero">
+          <section className="home--hero-text">
+            <header className="home--hero-text-header">Hi, I&apos;m Elias!</header>
+            <p className="home--hero-text-description">
+              I&apos;m an aspiring software engineer who transforms ideas into powerful code to build innovative
+              solutions.
+            </p>
+            <div className="home--hero-links">
+              <a
+                href="https://github.com/sailecodes"
+                target="_blank"
+                rel="noopener noreferrer">
+                Github
+              </a>
+              <a
+                href="https://www.linkedin.com/in/elias-iv-roman/"
+                target="_blank"
+                rel="noopener noreferrer">
+                LinkedIn
+              </a>
+            </div>
+          </section>
+          <div className="home--img-container">
+            <img
+              src={pfp}
+              alt="Profile picture"
+            />
           </div>
         </section>
-        <div className="home--img-container">
-          <img
-            src={pfp}
-            alt="Profile picture"
-          />
-        </div>
-      </section>
-      <section className="home--set">
-        <section className="home--skills">
-          <header>Skills</header>
-          <div>
-            <JavaIcon />
-            <HtmlIcon />
-            <CssIcon />
-            <JavascriptIcon />
-            <ReactIcon />
-            <NodeIcon />
-          </div>
+        <section className="home--set">
+          <section className="home--skills">
+            <header>Skills</header>
+            <div>
+              <JavaIcon />
+              <HtmlIcon />
+              <CssIcon />
+              <JavascriptIcon />
+              <ReactIcon />
+              <NodeIcon />
+            </div>
+          </section>
+          <section className="home--tools">
+            <header>Tools</header>
+            <div>
+              <GithubIcon />
+              <VsCodeIcon />
+              <SiIntellijidea />
+              <PostmanIcon />
+            </div>
+          </section>
         </section>
-        <section className="home--tools">
-          <header>Tools</header>
-          <div>
-            <GithubIcon />
-            <VsCodeIcon />
-            <SiIntellijidea />
-            <PostmanIcon />
-          </div>
-        </section>
-      </section>
+      </div>
     </HomeWrapper>
   );
 };
