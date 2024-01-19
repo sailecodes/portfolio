@@ -9,11 +9,13 @@ const Projects = () => {
         {projects.map((project, ind) => (
           <>
             <ProjectItem
-              key={ind}
+              key={ind + project.explanation}
               {...project}
             />
             {ind !== projects.length - 1 && (
-              <div className="projects--line-container">
+              <div
+                key={ind}
+                className="projects--line-container">
                 <div className="projects--line"></div>
               </div>
             )}

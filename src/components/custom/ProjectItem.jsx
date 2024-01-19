@@ -12,7 +12,13 @@ const ProjectItem = ({ date, name, skills, description, explanation, links }) =>
           <div className="project-item--skills">
             {skills.map((skill, ind) => (
               <>
-                {ind !== 0 && <div className="dot-separator">&middot;</div>}
+                {ind !== 0 && (
+                  <div
+                    key={"dot-separator" + name}
+                    className="dot-separator">
+                    &middot;
+                  </div>
+                )}
                 <p key={name + skill}>{skill}</p>
               </>
             ))}
