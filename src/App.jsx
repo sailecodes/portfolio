@@ -7,24 +7,24 @@ import Main from "./components/pages/Main";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Main />,
     // path: "/",
-    // element: <Layout />,
-    // children: [
-    //   {
-    //     index: true,
-    //     element: <Home />,
-    //   },
-    //   {
-    //     path: "/projects",
-    //     element: <Projects />,
-    //   },
-    //   {
-    //     path: "/contact",
-    //     element: <Contact />,
-    //   },
-    // ],
+    // element: <Main />,
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "/projects",
+        element: <Projects />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
   },
 ]);
 

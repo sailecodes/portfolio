@@ -1,0 +1,66 @@
+@use "mixins" as *;
+@use "_variables" as vars;
+
+.main--container {
+  position: relative;
+
+  .main--nav {
+    position: fixed;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    padding-left: 1.5rem;
+
+    .main--nav-marker {
+      background-color: red;
+
+      width: 1rem;
+      height: 1rem;
+
+      margin-bottom: 1.5rem;
+      border-radius: 50%;
+    }
+  }
+
+  .main--header {
+    display: grid;
+    place-items: center;
+
+    font-size: vars.$font-heading-sm-1;
+    font-weight: 500;
+    letter-spacing: -1px;
+
+    padding: 1rem 4rem;
+  }
+
+  .main--hero {
+    background-color: lightblue;
+
+    display: grid;
+    place-items: center;
+
+    height: 50rem;
+
+    font-size: vars.$font-heading-sm-2;
+    font-weight: 700;
+
+    padding: 4rem;
+  }
+
+  .main--skills {
+    @include flex-center-col(2rem);
+
+    padding: 4rem;
+
+    .main--skills-header {
+      font-size: vars.$font-subheading-sm-1;
+      text-transform: uppercase;
+    }
+
+    .main--skills-icons svg {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+}
