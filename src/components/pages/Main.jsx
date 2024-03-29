@@ -39,9 +39,9 @@ const Main = () => {
           <div className="main--projects-container">
             <div className="main--projects-project">
               <header>
-                Shoe Szn <span>January 2024</span>
+                Shoe Szn <span>Jan 2024</span>
               </header>
-              <p></p>
+              <p>An e-commerce website that provides consumers with a selection of shoes handpicked by a community.</p>
             </div>
           </div>
         </section>

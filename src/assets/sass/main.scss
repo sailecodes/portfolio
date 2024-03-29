@@ -4,6 +4,8 @@
 .main--container {
   position: relative;
 
+  overflow: auto;
+
   .main--nav {
     position: fixed;
     top: 50%;
@@ -29,7 +31,7 @@
     font-size: vars.$font-subheading-sm-1;
     font-weight: 600;
 
-    margin-bottom: 1.2rem;
+    margin-bottom: 3.2rem;
   }
 
   .main--hero {
@@ -43,7 +45,7 @@
     p:nth-child(1) {
       font-size: vars.$font-heading-sm-2;
 
-      margin-bottom: 1.2rem;
+      margin-bottom: 0.8rem;
     }
 
     p:nth-child(2) {
@@ -69,6 +71,30 @@
     margin-bottom: 8rem;
 
     .main--projects-container {
+      .main--projects-project {
+        header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          color: vars.$color-white;
+
+          font-size: vars.$font-regular-sm-3;
+          font-weight: 500;
+
+          margin-bottom: 0.4rem;
+
+          span {
+            color: vars.$color-gray;
+          }
+        }
+
+        p {
+          color: vars.$color-gray;
+
+          font-size: vars.$font-regular-sm-2;
+        }
+      }
     }
   }
 

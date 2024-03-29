@@ -4,9 +4,6 @@
 /* ====== DEFAULT STYLINGS */
 /* ============================================== */
 
-:root {
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +16,8 @@ html {
 
 body {
   background-color: vars.$color-background;
-  font-family: "Wix Madefor Text", sans-serif;
+
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -84,11 +82,11 @@ button:hover,
 }
 
 ::-webkit-scrollbar-track {
-  // background-color: var(--color-white);
+  background-color: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
-  // background: var(--color-gray-white);
+  background: red;
 
-  /* border-radius: 8px; */
+  border-radius: 8px;
 }
