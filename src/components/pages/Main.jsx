@@ -21,9 +21,29 @@ const Main = () => {
         ))}
       </nav>
       <main className="main--content">
-        <header className="main--header">elias.</header>
         <section className="main--hero">
-          An aspiring software engineer with a passion to use software as a medium to help others.
+          <p>Hi, I&apos;m Elias 👋</p>
+          <p>an aspiring software engineer with a passion to use software as a medium to help others.</p>
+        </section>
+        <section className="main--about">
+          <header className="main--section-header">About me</header>
+          <p>
+            I&apos;m a recent CS graduate from UC San Diego with a firm understanding of fundamental CS principles, such
+            as algorithms, data structures, and software development practices. Moreover, I have adequate experience in
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aliquam enim commodi omnis animi rerum ipsum!
+            Nam debitis magni vitae id. Vitae dicta iste cum porro, perferendis quos molestias modi.
+          </p>
+        </section>
+        <section className="main--projects">
+          <header className="main--section-header">Projects</header>
+          <div className="main--projects-container">
+            <div className="main--projects-project">
+              <header>
+                Shoe Szn <span>January 2024</span>
+              </header>
+              <p></p>
+            </div>
+          </div>
         </section>
         <section className="main--skills">
           <header className="main--skills-header">Skills</header>

@@ -23,29 +23,53 @@
     }
   }
 
-  .main--header {
-    display: grid;
-    place-items: center;
+  .main--section-header {
+    color: vars.$color-white;
 
-    font-size: vars.$font-heading-sm-1;
-    font-weight: 500;
-    letter-spacing: -1px;
+    font-size: vars.$font-subheading-sm-1;
+    font-weight: 600;
 
-    padding: 1rem 4rem;
+    margin-bottom: 1.2rem;
   }
 
   .main--hero {
-    background-color: lightblue;
+    color: vars.$color-white;
 
-    display: grid;
-    place-items: center;
-
-    height: 50rem;
-
-    font-size: vars.$font-heading-sm-2;
     font-weight: 700;
 
-    padding: 4rem;
+    padding: 8rem 4rem;
+    margin-bottom: 8rem;
+
+    p:nth-child(1) {
+      font-size: vars.$font-heading-sm-2;
+
+      margin-bottom: 1.2rem;
+    }
+
+    p:nth-child(2) {
+      color: vars.$color-gray;
+
+      font-size: vars.$font-subheading-sm-1;
+    }
+  }
+
+  .main--about {
+    padding: 8rem 4rem;
+    margin-bottom: 8rem;
+
+    p {
+      color: vars.$color-gray;
+
+      font-size: vars.$font-regular-sm-2;
+    }
+  }
+
+  .main--projects {
+    padding: 8rem 4rem;
+    margin-bottom: 8rem;
+
+    .main--projects-container {
+    }
   }
 
   .main--skills {

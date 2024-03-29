@@ -7,8 +7,6 @@ import Main from "./components/pages/Main";
 
 const router = createBrowserRouter([
   {
-    // path: "/",
-    // element: <Main />,
     path: "/",
     element: <Layout />,
     children: [
@@ -25,6 +23,10 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
     ],
+  },
+  {
+    path: "/test",
+    element: <Main />,
   },
 ]);
 
