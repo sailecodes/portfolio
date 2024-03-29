@@ -36,26 +36,43 @@ const Main = () => {
         </section>
         <section className="main--projects">
           <header className="main--section-header">Projects</header>
-          <div className="main--projects-container">
-            <div className="main--projects-project">
-              <header>
-                Shoe Szn <span>Jan 2024</span>
-              </header>
-              <p>An e-commerce website that provides consumers with a selection of shoes handpicked by a community.</p>
-            </div>
+          <div>
+            <Project
+              date="January 2024 - Present"
+              title="Shoe Szn"
+              intro=""
+              description="An e-commerce website that provides consumers with a selection of shoes handpicked by a community."
+            />
+            <Project
+              date="December 2023"
+              title="InstaIV"
+              intro="A social media application based on Instagram’s design and basic functionalities."
+              description="This was a personal project that allowed me to reinforce my understanding of social media applications. I designed a React frontend based on Instagram's UI and incorporated the TanStack React Query, React Router, Axios, and styled-components frameworks. I also built a Node and Express backend to handle various operations, such as logging in or following other users, and integrated JSON Web Token authentication to restrict routes from unregistered users. Additionally, I utilized bcrypt hashing to protect passwords stored in the database. For data storage, I implemented the server to communicate with MongoDB and Cloudinary to store text-based information and pictures, respectively."
+            />
+            <Project
+              date="December 2022"
+              title="Birds of a Feather"
+              intro="An Android application that allows students to connect with one another based on classes."
+              description="This was a six-member project for my software engineering class at UCSD. It was developed with agile software methodologies to simulate or mimic a real-world work environment within a three-month period. I implemented comparison and sorting algorithms to filter students and classes, created various white-box and unit tests, collaborated on the UI design, and coordinated stand-up and weekly meetings."
+            />
           </div>
         </section>
-        <section className="main--skills">
-          <header className="main--skills-header">Skills</header>
-          <div className="main--skills-icons">
-            <HtmlIcon />
-            <CssIcon />
-          </div>
-        </section>
-        <section className="main--projects"></section>
-        <section className="main--contact"></section>
       </main>
     </div>
   );
 };
+
+const Project = ({ date, title, intro, description }) => {
+  return (
+    <div className="main--projects-project">
+      <p className="main--projects-project-date">{date}</p>
+      <p className="main--projects-project-title">{title}</p>
+      <p className="main--projects-project-description">
+        <span>{intro}</span>
+        {description}
+      </p>
+    </div>
+  );
+};
+
 export default Main;

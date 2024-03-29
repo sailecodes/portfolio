@@ -78,15 +78,13 @@ button:hover,
 /* ============================================== */
 
 ::-webkit-scrollbar {
-  width: 1rem;
+  width: 0.4rem;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #fff;
+  background-color: vars.$color-background;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: red;
-
-  border-radius: 8px;
+  background: vars.$color-gray;
 }

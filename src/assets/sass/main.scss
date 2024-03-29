@@ -25,22 +25,25 @@
     }
   }
 
+  section {
+    padding: 8rem 4rem;
+    margin-bottom: 8rem;
+  }
+
   .main--section-header {
     color: vars.$color-white;
 
     font-size: vars.$font-subheading-sm-1;
     font-weight: 600;
+    text-transform: uppercase;
 
-    margin-bottom: 3.2rem;
+    margin-bottom: 4rem;
   }
 
   .main--hero {
     color: vars.$color-white;
 
     font-weight: 700;
-
-    padding: 8rem 4rem;
-    margin-bottom: 8rem;
 
     p:nth-child(1) {
       font-size: vars.$font-heading-sm-2;
@@ -56,9 +59,6 @@
   }
 
   .main--about {
-    padding: 8rem 4rem;
-    margin-bottom: 8rem;
-
     p {
       color: vars.$color-gray;
 
@@ -66,51 +66,39 @@
     }
   }
 
-  .main--projects {
-    padding: 8rem 4rem;
-    margin-bottom: 8rem;
+  .main--projects-project {
+    margin-bottom: 4rem;
 
-    .main--projects-container {
-      .main--projects-project {
-        header {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+    .main--projects-project-date {
+      color: vars.$color-gray;
 
-          color: vars.$color-white;
-
-          font-size: vars.$font-regular-sm-3;
-          font-weight: 500;
-
-          margin-bottom: 0.4rem;
-
-          span {
-            color: vars.$color-gray;
-          }
-        }
-
-        p {
-          color: vars.$color-gray;
-
-          font-size: vars.$font-regular-sm-2;
-        }
-      }
-    }
-  }
-
-  .main--skills {
-    @include flex-center-col(2rem);
-
-    padding: 4rem;
-
-    .main--skills-header {
-      font-size: vars.$font-subheading-sm-1;
+      font-size: vars.$font-regular-sm-1;
+      font-weight: 500;
       text-transform: uppercase;
+
+      margin-bottom: 0.4rem;
     }
 
-    .main--skills-icons svg {
-      width: 5rem;
-      height: 5rem;
+    .main--projects-project-title {
+      color: vars.$color-white;
+
+      font-size: vars.$font-subheading-sm-1;
+      font-weight: 600;
+      font-style: italic;
+
+      margin-bottom: 1.2rem;
+    }
+
+    .main--projects-project-description {
+      color: vars.$color-gray;
+
+      font-size: vars.$font-regular-sm-2;
+
+      span {
+        display: inline-block;
+
+        margin-bottom: 0.8rem;
+      }
     }
   }
 }
