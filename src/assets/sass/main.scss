@@ -25,47 +25,61 @@
     }
   }
 
+  // ----------
+  // ---------- SECTIONS
+  // ----------
   section {
     padding: 8rem 4rem;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
   }
 
   .main--section-header {
     color: vars.$color-white;
 
-    font-size: vars.$font-subheading-sm-1;
+    font-size: vars.$font-regular-sm-2;
     font-weight: 600;
     text-transform: uppercase;
 
     margin-bottom: 4rem;
   }
 
+  // ----------
+  // ---------- SECTION: HERO
+  // ----------
   .main--hero {
     color: vars.$color-white;
 
-    font-weight: 700;
-
     p:nth-child(1) {
       font-size: vars.$font-heading-sm-2;
+      font-weight: 700;
 
       margin-bottom: 0.8rem;
     }
 
     p:nth-child(2) {
       color: vars.$color-gray;
-
-      font-size: vars.$font-subheading-sm-1;
-    }
-  }
-
-  .main--about {
-    p {
-      color: vars.$color-gray;
+      font-weight: 500;
 
       font-size: vars.$font-regular-sm-2;
     }
   }
 
+  // ----------
+  // ---------- SECTION: ABOUT ME
+  // ----------
+  .main--about {
+    p {
+      color: vars.$color-gray;
+
+      font-size: vars.$font-regular-sm-2;
+      font-weight: 500;
+      line-height: 2.5rem;
+    }
+  }
+
+  // ----------
+  // ---------- SECTION: PROJECTS
+  // ----------
   .main--projects-project {
     margin-bottom: 4rem;
 
@@ -80,13 +94,29 @@
     }
 
     .main--projects-project-title {
-      color: vars.$color-white;
-
-      font-size: vars.$font-subheading-sm-1;
-      font-weight: 600;
-      font-style: italic;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
       margin-bottom: 1.2rem;
+
+      p {
+        color: vars.$color-white;
+
+        font-size: vars.$font-subheading-sm-1;
+        font-weight: 600;
+        font-style: italic;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        a {
+          color: vars.$color-white;
+        }
+      }
     }
 
     .main--projects-project-description {
@@ -94,10 +124,28 @@
 
       font-size: vars.$font-regular-sm-2;
 
+      margin-bottom: 2rem;
+
       span {
         display: inline-block;
 
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.4rem;
+      }
+    }
+
+    .main--projects-project-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      p {
+        background-color: #202740;
+        color: #a4e6e1;
+
+        font-size: vars.$font-regular-sm-1;
+
+        padding: 0.6rem 1.2rem;
+        border-radius: 100px;
       }
     }
   }
