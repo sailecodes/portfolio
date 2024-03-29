@@ -108,7 +108,7 @@ button:hover,
 /* ============================================== */
 
 ::-webkit-scrollbar {
-  width: 0.8rem;
+  width: 0.4rem;
 }
 
 /* Track */
@@ -118,5 +118,5 @@ button:hover,
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: blue;
+  background: var(--color-scroll-thumb);
 }

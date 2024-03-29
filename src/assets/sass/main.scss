@@ -16,18 +16,11 @@
     padding-left: 1.5rem;
 
     .main--nav-marker {
-      // background-color: #202740;
-
       width: 1rem;
       height: 1rem;
 
       margin-bottom: 1.5rem;
       border-radius: 50%;
-    }
-
-    // FIXME: Temporary
-    .main--nav-marker:nth-child(2) {
-      background-color: vars.$color-gray;
     }
   }
 

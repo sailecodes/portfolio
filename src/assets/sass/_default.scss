@@ -18,8 +18,6 @@ body {
   background-color: vars.$color-background;
 
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 /* ============================================== */
@@ -48,17 +46,12 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  cursor: pointer;
-}
-
 /* ============================================== */
 /* ====== BUTTONS */
 /* ============================================== */
 
 button {
   font-family: inherit;
-  font-weight: 500;
   background: none;
   border: none;
 }
