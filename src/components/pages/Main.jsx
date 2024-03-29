@@ -69,12 +69,25 @@ const Main = () => {
           ref={about}
           id="about">
           <header className="main--section-header">About me</header>
-          <p>
-            I&apos;m a recent CS graduate from UC San Diego with a firm understanding of fundamental CS principles, such
-            as algorithms, data structures, and software development practices. Moreover, I have extensive experience in
-            code documentation, version control, collaborative team projects, and several languages, such as Java and
-            JavaScript. I&apos;ve also tackled several personal projects that focus on full-stack development.
-          </p>
+          <div>
+            <p>
+              I&apos;m a recent CS graduate from UC San Diego with a firm understanding of fundamental CS principles,
+              such as <span>algorithms</span>, <span>data structures</span>, and <span>software development </span>
+              practices. Moreover, I&apos;ve extensive experience in <span>code documentation</span>,{" "}
+              <span> version control</span>, <span>collaborative team projects</span>, and several languages, such as
+              <span> Java</span> and <span>JavaScript</span>.
+            </p>
+            <p>
+              I&apos;ve also tackled various personal projects that focus on <span>full-stack development</span>. Most
+              are built using the <span>MERN Stack</span>, in which I use multiple frameworks and packages, including
+              <span> React Query</span>, <span>React Router Dom</span>, and <span>Sass</span>.
+            </p>
+            <p>
+              When it comes to non-techy things, I enjoy <span>eating food</span>, <span>playing volleyball</span>, and
+              <span> spending time with friends and family</span>. I also have an <span>adorable, shy cat</span> named
+              Nori!
+            </p>
+          </div>
         </section>
         <section
           className="main--projects"
