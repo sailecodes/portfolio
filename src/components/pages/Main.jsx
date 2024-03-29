@@ -19,38 +19,22 @@ const Main = () => {
   return (
     <main className="main">
       <nav className="main--nav">
-        <a href="#hero">
-          <motion.div
-            className="main--nav-marker"
-            whileHover={{ scale: 1.4, cursor: "pointer" }}
-            transition={{ duration: 0.3 }}
-            style={{ backgroundColor: heroInView ? "#9c9faa" : "#202740" }}
-          />
-        </a>
-        <a href="#about">
-          <motion.div
-            className="main--nav-marker"
-            whileHover={{ scale: 1.4, cursor: "pointer" }}
-            transition={{ duration: 0.3 }}
-            style={{ backgroundColor: !heroInView && aboutInView ? "#9c9faa" : "#202740" }}
-          />
-        </a>
-        <a href="#projects">
-          <motion.div
-            className="main--nav-marker"
-            whileHover={{ scale: 1.4, cursor: "pointer" }}
-            transition={{ duration: 0.3 }}
-            style={{ backgroundColor: !aboutInView && projectsInView && !creditInView ? "#9c9faa" : "#202740" }}
-          />
-        </a>
-        <a href="#credit">
-          <motion.div
-            className="main--nav-marker"
-            whileHover={{ scale: 1.4, cursor: "pointer" }}
-            transition={{ duration: 0.3 }}
-            style={{ backgroundColor: creditInView ? "#9c9faa" : "#202740" }}
-          />
-        </a>
+        <NavMarker
+          href="#hero"
+          style={{ backgroundColor: heroInView ? "#9c9faa" : "#202740" }}
+        />
+        <NavMarker
+          href="#about"
+          style={{ backgroundColor: !heroInView && aboutInView ? "#9c9faa" : "#202740" }}
+        />
+        <NavMarker
+          href="#projects"
+          style={{ backgroundColor: !aboutInView && projectsInView && !creditInView ? "#9c9faa" : "#202740" }}
+        />
+        <NavMarker
+          href="#credit"
+          style={{ backgroundColor: creditInView ? "#9c9faa" : "#202740" }}
+        />
       </nav>
       <div>
         <section
@@ -122,6 +106,19 @@ const Main = () => {
         </section>
       </div>
     </main>
+  );
+};
+
+const NavMarker = ({ href, style }) => {
+  return (
+    <a href={href}>
+      <motion.div
+        className="main--nav-marker"
+        whileHover={{ scale: 1.4, cursor: "pointer" }}
+        transition={{ duration: 0.3 }}
+        style={style}
+      />
+    </a>
   );
 };
 
