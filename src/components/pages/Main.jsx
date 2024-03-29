@@ -21,19 +21,25 @@ const Main = () => {
       <nav className="main--nav">
         <NavMarker
           href="#hero"
-          style={{ backgroundColor: heroInView ? "#9c9faa" : "#202740" }}
+          style={{ backgroundColor: heroInView ? "#9c9faa" : "#202740", transition: "background-color 0.2s" }}
         />
         <NavMarker
           href="#about"
-          style={{ backgroundColor: !heroInView && aboutInView ? "#9c9faa" : "#202740" }}
+          style={{
+            backgroundColor: !heroInView && aboutInView ? "#9c9faa" : "#202740",
+            transition: "background-color 0.2s",
+          }}
         />
         <NavMarker
           href="#projects"
-          style={{ backgroundColor: !aboutInView && projectsInView && !creditInView ? "#9c9faa" : "#202740" }}
+          style={{
+            backgroundColor: !aboutInView && projectsInView && !creditInView ? "#9c9faa" : "#202740",
+            transition: "background-color 0.2s",
+          }}
         />
         <NavMarker
           href="#credit"
-          style={{ backgroundColor: creditInView ? "#9c9faa" : "#202740" }}
+          style={{ backgroundColor: creditInView ? "#9c9faa" : "#202740", transition: "background-color 0.2s" }}
         />
       </nav>
       <div>
