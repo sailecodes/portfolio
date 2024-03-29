@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaTelegramPlane, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaTelegramPlane, FaGithub } from "react-icons/fa";
 
 import "../../assets/sass/main.scss";
 import JavaIcon from "../icons/JavaIcon";
@@ -8,6 +8,7 @@ import HtmlIcon from "../icons/HtmlIcon";
 import CssIcon from "../icons/CssIcon";
 import ReactIcon from "../icons/ReactIcon";
 import NodeIcon from "../icons/NodeIcon";
+import { projects_new } from "../../data/projects";
 
 const Main = () => {
   return (
@@ -26,6 +27,10 @@ const Main = () => {
         <section className="main--hero">
           <p>Hi, I&apos;m Elias 👋</p>
           <p>an aspiring software engineer with a passion to use software as a medium to help others.</p>
+          <div>
+            <FaLinkedin size={22} />
+            <FaGithub size={22} />
+          </div>
         </section>
         <section className="main--about">
           <header className="main--section-header">About me</header>
@@ -39,46 +44,17 @@ const Main = () => {
         <section className="main--projects">
           <header className="main--section-header">Projects</header>
           <div>
-            <Project
-              date="Present"
-              title="Shoe Szn"
-              links={["https://github.com/sailecodes/shoe-szn", "#"]}
-              intro=""
-              description="An e-commerce website that provides consumers with a selection of shoes handpicked by a community."
-              skills={[
-                "React.js",
-                "Node.js",
-                "Express.js",
-                "styled-components",
-                "MongoDB",
-                "MERN",
-                "E-commerce Application",
-              ]}
-            />
-            <Project
-              date="December 2023"
-              title="InstaIV"
-              links={["https://github.com/sailecodes/instaiv", "https://instaiv.up.railway.app/"]}
-              intro="A social media application based on Instagram’s design and basic functionalities."
-              description="This was a personal project that allowed me to reinforce my understanding of social media applications. I designed a React frontend based on Instagram's UI and incorporated the TanStack React Query, React Router, Axios, and styled-components frameworks. I also built a Node and Express backend to handle various operations, such as logging in or following other users, and integrated JSON Web Token authentication to restrict routes from unregistered users. Additionally, I utilized bcrypt hashing to protect passwords stored in the database. For data storage, I implemented the server to communicate with MongoDB and Cloudinary to store text-based information and pictures, respectively."
-              skills={["React.js", "Node.js", "Express.js", "Sass", "MongoDB", "MERN", "Social Media Application"]}
-            />
-            <Project
-              date="December 2022"
-              title="Birds of a Feather"
-              links={["https://github.com/CSE-110-Winter-2022/birds-of-a-feather-team-29", "#"]}
-              intro="An Android application that allows students to connect with one another based on classes."
-              description="This was a six-member project for my software engineering class at UCSD. It was developed with agile software methodologies to simulate or mimic a real-world work environment within a three-month period. I implemented comparison and sorting algorithms to filter students and classes, created various white-box and unit tests, collaborated on the UI design, and coordinated stand-up and weekly meetings."
-              skills={[
-                "Java",
-                "Unit Testing",
-                "UI Design",
-                "Android Studio",
-                "Agile Methodologies",
-                "Software Design Patterns",
-                "Android Application",
-              ]}
-            />
+            {projects_new.map((project, ind) => (
+              <Project
+                key={ind}
+                date={project.date}
+                title={project.title}
+                links={project.links}
+                intro={project.intro}
+                description={project.description}
+                skills={project.skills}
+              />
+            ))}
           </div>
         </section>
       </main>
