@@ -15,7 +15,7 @@
 
     padding-left: 1.5rem;
 
-    .main--nav-marker {
+    a .main--nav-marker {
       width: 1rem;
       height: 1rem;
 
@@ -41,7 +41,8 @@
   // -------------------- SECTION: HERO
   // --------------------
   .main--hero {
-    padding: 8rem 4rem 12rem;
+    padding: 8rem 4rem 0rem;
+    margin-bottom: 16rem;
 
     p:nth-child(1) {
       color: vars.$color-white;
@@ -75,7 +76,8 @@
   // -------------------- SECTION: ABOUT ME
   // --------------------
   .main--about {
-    padding: 8rem 4rem 12rem;
+    padding: 4rem 4rem 0rem;
+    margin-bottom: 16rem;
 
     p {
       color: vars.$color-gray;
@@ -90,7 +92,8 @@
   // -------------------- SECTION: PROJECTS
   // --------------------
   .main--projects {
-    padding: 8rem 4rem 20rem;
+    padding: 4rem 4rem 0rem;
+    margin-bottom: 16rem;
 
     .main--projects-project:last-child {
       margin-bottom: 0;
@@ -180,7 +183,7 @@
     font-weight: 500;
     line-height: 2.5rem;
 
-    padding: 0 4rem 8rem;
+    padding: 4rem 4rem 8rem;
 
     a {
       color: vars.$color-white;

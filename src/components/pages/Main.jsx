@@ -1,9 +1,9 @@
-import { motion, useAnimationControls, useInView } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { FaLinkedin, FaTelegramPlane, FaGithub } from "react-icons/fa";
 
 import "../../assets/sass/main.scss";
 import { projects_new } from "../../data/projects";
-import { useEffect, useRef } from "react";
 
 const Main = () => {
   const hero = useRef(null);
@@ -14,48 +14,49 @@ const Main = () => {
   const heroInView = useInView(hero);
   const aboutInView = useInView(about);
   const projectsInView = useInView(projects);
-  const creditInView = useInView(credit, { amount: 0.25 });
+  const creditInView = useInView(credit);
 
   return (
     <main className="main">
       <nav className="main--nav">
-        <motion.div
-          className="main--nav-marker"
-          whileHover={{ scale: 1.4, cursor: "pointer" }}
-          transition={{ duration: 0.3 }}
-          style={{ backgroundColor: heroInView ? "#9c9faa" : "#202740" }}
-        />
-        <motion.div
-          className="main--nav-marker"
-          whileHover={{ scale: 1.4, cursor: "pointer" }}
-          transition={{ duration: 0.3 }}
-          style={{ backgroundColor: !heroInView && aboutInView ? "#9c9faa" : "#202740" }}
-        />
-        <motion.div
-          className="main--nav-marker"
-          whileHover={{ scale: 1.4, cursor: "pointer" }}
-          transition={{ duration: 0.3 }}
-          style={{ backgroundColor: !aboutInView && projectsInView && !creditInView ? "#9c9faa" : "#202740" }}
-        />
-        <motion.div
-          className="main--nav-marker"
-          whileHover={{ scale: 1.4, cursor: "pointer" }}
-          transition={{ duration: 0.3 }}
-          style={{ backgroundColor: creditInView ? "#9c9faa" : "#202740" }}
-        />
-        {/* {Array.from(Array(4)).map((_, ind) => (
+        <a href="#hero">
           <motion.div
-            key={ind}
             className="main--nav-marker"
-            whileHover={{ scale: 1.4, cursor: "pointer", color: "#e6e7ea" }}
+            whileHover={{ scale: 1.4, cursor: "pointer" }}
             transition={{ duration: 0.3 }}
+            style={{ backgroundColor: heroInView ? "#9c9faa" : "#202740" }}
           />
-        ))} */}
+        </a>
+        <a href="#about">
+          <motion.div
+            className="main--nav-marker"
+            whileHover={{ scale: 1.4, cursor: "pointer" }}
+            transition={{ duration: 0.3 }}
+            style={{ backgroundColor: !heroInView && aboutInView ? "#9c9faa" : "#202740" }}
+          />
+        </a>
+        <a href="#projects">
+          <motion.div
+            className="main--nav-marker"
+            whileHover={{ scale: 1.4, cursor: "pointer" }}
+            transition={{ duration: 0.3 }}
+            style={{ backgroundColor: !aboutInView && projectsInView && !creditInView ? "#9c9faa" : "#202740" }}
+          />
+        </a>
+        <a href="#credit">
+          <motion.div
+            className="main--nav-marker"
+            whileHover={{ scale: 1.4, cursor: "pointer" }}
+            transition={{ duration: 0.3 }}
+            style={{ backgroundColor: creditInView ? "#9c9faa" : "#202740" }}
+          />
+        </a>
       </nav>
       <div>
         <section
           className="main--hero"
-          ref={hero}>
+          ref={hero}
+          id="hero">
           <p>Hi, I&apos;m Elias 👋</p>
           <p>an aspiring software engineer with a passion to use software as a medium to help others.</p>
           <div>
@@ -75,7 +76,8 @@ const Main = () => {
         </section>
         <section
           className="main--about"
-          ref={about}>
+          ref={about}
+          id="about">
           <header className="main--section-header">About me</header>
           <p>
             I&apos;m a recent CS graduate from UC San Diego with a firm understanding of fundamental CS principles, such
@@ -86,7 +88,8 @@ const Main = () => {
         </section>
         <section
           className="main--projects"
-          ref={projects}>
+          ref={projects}
+          id="projects">
           <header className="main--section-header">Projects</header>
           <div>
             {projects_new.map((project, ind) => (
@@ -104,7 +107,8 @@ const Main = () => {
         </section>
         <section
           className="main--credit"
-          ref={credit}>
+          ref={credit}
+          id="credit">
           <header className="main--section-header">Credit</header>
           Inspired by Brittany Chiang&apos;s beautiful{" "}
           <a
