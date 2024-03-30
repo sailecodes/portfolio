@@ -18,7 +18,7 @@ const Main = () => {
 
   return (
     <main className="main">
-      <nav className="main--nav">
+      {/* <nav className="main--nav">
         <NavMarker
           href="#hero"
           style={{ backgroundColor: heroInView ? "#9c9faa" : "#202740", transition: "background-color 0.2s" }}
@@ -41,88 +41,94 @@ const Main = () => {
           href="#credit"
           style={{ backgroundColor: creditInView ? "#9c9faa" : "#202740", transition: "background-color 0.2s" }}
         />
-      </nav>
-      <div>
-        <section
-          className="main--hero"
-          ref={hero}
-          id="hero">
-          <p>Hi, I&apos;m Elias 👋</p>
-          <p>an aspiring software engineer with a passion to use software as a medium to help others.</p>
-          <div>
+      </nav> */}
+      <div className="main--content">
+        <div className="main--left-half">
+          <section
+            className="main--hero"
+            ref={hero}
+            id="hero">
+            <p>Hi, I&apos;m Elias 👋</p>
+            <p>an aspiring software engineer with a passion to use software as a medium to help others.</p>
+            <div>
+              <a
+                href="https://www.linkedin.com/in/elias-iv-roman/"
+                target="_blank"
+                rel="noopener noreferrer">
+                <FaLinkedin size={23} />
+              </a>
+              <a
+                href="https://github.com/sailecodes"
+                target="_blank"
+                rel="noopener noreferrer">
+                <FaGithub size={23} />
+              </a>
+            </div>
+          </section>
+          <section
+            className="main--about"
+            ref={about}
+            id="about">
+            <header className="main--section-header">About me</header>
+            <div>
+              <p>
+                I&apos;m a recent CS graduate from UC San Diego with a firm understanding of fundamental CS principles,
+                such as <span>algorithms</span>, <span>data structures</span>, and <span>software development </span>
+                practices. Moreover, I&apos;ve extensive experience in <span>code documentation</span>,
+                <span> version control</span>, <span>collaborative team projects</span>,{" "}
+                <span>agile methodologies</span>, and several languages, such as
+                <span> Java</span> and <span>JavaScript</span>.
+              </p>
+              <p>
+                I&apos;ve also tackled various personal projects that focus on <span>full-stack development</span>. Most
+                are built using the <span>MERN Stack</span>, in which I use multiple frameworks and packages, including
+                <span> React Query</span>, <span>React Router Dom</span>, and <span>Sass</span>.
+              </p>
+              <p>
+                When it comes to non-techy things, I enjoy <span>eating food</span>, <span>playing volleyball</span>,
+                and
+                <span> spending time with friends and family</span>. I also have an <span>adorable, shy cat</span> named
+                Nori!
+              </p>
+            </div>
+          </section>
+        </div>
+        <div className="main--right-half">
+          <section
+            className="main--projects"
+            ref={projects}
+            id="projects">
+            <header className="main--section-header">Projects</header>
+            <div>
+              {projects_new.map((project, ind) => (
+                <Project
+                  key={ind}
+                  date={project.date}
+                  title={project.title}
+                  links={project.links}
+                  intro={project.intro}
+                  description={project.description}
+                  skills={project.skills}
+                />
+              ))}
+            </div>
+          </section>
+          <section
+            className="main--credit"
+            ref={credit}
+            id="credit">
+            <header className="main--section-header">Credit</header>
+            Inspired by Brittany Chiang&apos;s beautiful{" "}
             <a
-              href="https://www.linkedin.com/in/elias-iv-roman/"
+              href="https://brittanychiang.com/?ref=hackernoon.com"
               target="_blank"
               rel="noopener noreferrer">
-              <FaLinkedin size={22} />
+              portfolio
             </a>
-            <a
-              href="https://github.com/sailecodes"
-              target="_blank"
-              rel="noopener noreferrer">
-              <FaGithub size={22} />
-            </a>
-          </div>
-        </section>
-        <section
-          className="main--about"
-          ref={about}
-          id="about">
-          <header className="main--section-header">About me</header>
-          <div>
-            <p>
-              I&apos;m a recent CS graduate from UC San Diego with a firm understanding of fundamental CS principles,
-              such as <span>algorithms</span>, <span>data structures</span>, and <span>software development </span>
-              practices. Moreover, I&apos;ve extensive experience in <span>code documentation</span>,{" "}
-              <span> version control</span>, <span>collaborative team projects</span>, and several languages, such as
-              <span> Java</span> and <span>JavaScript</span>.
-            </p>
-            <p>
-              I&apos;ve also tackled various personal projects that focus on <span>full-stack development</span>. Most
-              are built using the <span>MERN Stack</span>, in which I use multiple frameworks and packages, including
-              <span> React Query</span>, <span>React Router Dom</span>, and <span>Sass</span>.
-            </p>
-            <p>
-              When it comes to non-techy things, I enjoy <span>eating food</span>, <span>playing volleyball</span>, and
-              <span> spending time with friends and family</span>. I also have an <span>adorable, shy cat</span> named
-              Nori!
-            </p>
-          </div>
-        </section>
-        <section
-          className="main--projects"
-          ref={projects}
-          id="projects">
-          <header className="main--section-header">Projects</header>
-          <div>
-            {projects_new.map((project, ind) => (
-              <Project
-                key={ind}
-                date={project.date}
-                title={project.title}
-                links={project.links}
-                intro={project.intro}
-                description={project.description}
-                skills={project.skills}
-              />
-            ))}
-          </div>
-        </section>
-        <section
-          className="main--credit"
-          ref={credit}
-          id="credit">
-          <header className="main--section-header">Credit</header>
-          Inspired by Brittany Chiang&apos;s beautiful{" "}
-          <a
-            href="https://brittanychiang.com/?ref=hackernoon.com"
-            target="_blank"
-            rel="noopener noreferrer">
-            portfolio
-          </a>
-          . Built with <span>React.js</span>, designed with <span>Sass</span>, animated with <span>Framer Motion</span>,
-          and deployed on <span>Netlify</span>.
-        </section>
+            . Built with <span>React.js</span>, designed with <span>Sass</span>, animated with{" "}
+            <span>Framer Motion</span>, and deployed on <span>Netlify</span>.
+          </section>
+        </div>
       </div>
     </main>
   );
@@ -152,14 +158,14 @@ const Project = ({ date, title, links, intro, description, skills }) => {
             href={links[0]}
             target="_blank"
             rel="noopener noreferrer">
-            <FaGithub size={22} />
+            <FaGithub size={23} />
           </a>
           {links[1] !== "#" && (
             <a
               href={links[1]}
               target="_blank"
               rel="noopener noreferrer">
-              <FaTelegramPlane size={22} />
+              <FaTelegramPlane size={23} />
             </a>
           )}
         </div>
