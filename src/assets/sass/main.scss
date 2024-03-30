@@ -8,7 +8,7 @@
 
   height: 100vh;
 
-  padding: 0 4rem;
+  padding: 6rem 4rem;
 }
 
 // --------------------
@@ -31,7 +31,6 @@
 // --------------------
 
 .main--hero {
-  padding-top: 8rem;
   margin-bottom: 12rem;
 }
 
@@ -70,6 +69,8 @@
 // --------------------
 
 .main--about {
+  position: relative;
+
   padding-top: 4rem;
   margin-bottom: 12rem;
 }
@@ -90,6 +91,15 @@
 
 .main--about p span {
   color: vars.$color-white;
+}
+
+.main--about img {
+  display: inline-block;
+
+  width: 8rem;
+  height: 8rem;
+
+  margin-top: 0.8rem;
 }
 
 // --------------------
@@ -141,13 +151,21 @@
 }
 
 .main--projects-project-description {
+  margin-bottom: 2.1rem;
+}
+
+.main--projects-project-description p {
   color: vars.$color-gray;
 
   font-size: vars.$font-regular-sm-2;
   font-weight: 500;
   line-height: 2.8rem;
 
-  margin-bottom: 2.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.main--projects-project-description p:last-child {
+  margin: 0;
 }
 
 .main--projects-project-description span {
@@ -187,8 +205,6 @@
   font-size: vars.$font-regular-sm-2;
   font-weight: 500;
   line-height: 2.8rem;
-
-  padding-bottom: 8rem;
 }
 
 .main--credit a {
@@ -207,7 +223,7 @@
 
 @media (min-width: 660px) {
   .main {
-    padding: 0 6rem;
+    padding: 8rem 6rem;
   }
 
   .main--hero p:nth-child(1) {
@@ -224,48 +240,31 @@
     position: relative;
 
     display: flex;
-    justify-content: space-between;
-    gap: 8rem;
+    justify-content: center;
+    gap: 12rem;
 
-    overflow: hidden;
+    overflow: auto;
 
-    max-width: 145rem;
+    width: 100vw;
 
     padding: 8rem 10rem;
     margin: 0 auto;
   }
 
-  .main--content {
-  }
-
   .main--left-half {
     position: sticky;
     top: 0;
-    right: 0;
+
+    max-width: 60rem;
   }
 
   .main--right-half {
-    height: 100vh;
-
-    overflow-y: scroll;
-
-    padding: 0;
+    max-width: 60rem;
   }
 
-  .main--nav {
-    display: none;
-  }
-
-  .main--hero,
   .main--about,
-  .main--projects,
-  .main--credit {
-    padding: 0;
-    margin: 0;
-  }
-
-  .main--hero {
-    margin-bottom: 12rem;
+  .main--projects {
+    padding-top: 0;
   }
 
   .main--projects {

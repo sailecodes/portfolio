@@ -1,6 +1,7 @@
 import { FaLinkedin, FaTelegramPlane, FaGithub } from "react-icons/fa";
 
 import "../../assets/sass/main.scss";
+import catGif from "../../assets/gifs/cat-gif.gif";
 import { projects_new } from "../../data/projects";
 
 const Main = () => {
@@ -47,6 +48,10 @@ const Main = () => {
             <span> spending time with friends and family</span>. At home, I find comfort in my
             <span> adorable, shy cat</span> named Nori!
           </p>
+          <img
+            src={catGif}
+            alt="Animated cat massaging another cat"
+          />
         </section>
       </div>
       <div className="main--right-half">
@@ -75,8 +80,7 @@ const Main = () => {
             rel="noopener noreferrer">
             portfolio
           </a>
-          . Built with <span>React.js</span>, designed with <span>Sass</span>, animated with <span>Framer Motion</span>,
-          and deployed on <span>Netlify</span>.
+          . Built with <span>React.js</span>, designed with <span>Sass</span>, and deployed on <span>Netlify</span>.
         </section>
       </div>
     </main>
@@ -106,10 +110,10 @@ const Project = ({ date, title, links, intro, description, skills }) => {
           )}
         </div>
       </div>
-      <p className="main--projects-project-description">
-        <span>{intro}</span>
-        {description}
-      </p>
+      <div className="main--projects-project-description">
+        <p>{intro}</p>
+        <p>{description}</p>
+      </div>
       <div className="main--projects-project-skills">
         {skills.map((skill, ind) => (
           <p key={`${title} ${skill} ${ind}`}>{skill}</p>

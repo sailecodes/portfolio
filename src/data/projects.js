@@ -14,7 +14,25 @@ export const projects_new = [
     intro: "A social media application based on Instagram's design and basic functionalities.",
     description:
       "This project allowed me to reinforce my understanding of social media applications. I designed the frontend and backend and incorporated various methodologies such as JSON Web Token authentication and route restriction.",
-    skills: ["React.js", "Node.js", "Express.js", "styled-components", "MongoDB", "MERN", "Social Media Application"],
+    skills: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "styled-components",
+      "MongoDB",
+      "Cloudinary",
+      "MERN",
+      "Social Media Application",
+    ],
+  },
+  {
+    date: "October 2023",
+    title: "TodoIV",
+    links: ["https://github.com/sailecodes/todoiv", "#"],
+    intro: "A to-do list application for organizing various tasks.",
+    description:
+      "This project was meant for practicing the MERN stack. I built the frontend with a friendly and dynamic UI. As for the backend, I implemented different operations such as CRUD and user registration.",
+    skills: ["React.js", "Node.js", "Express.js", "styled-components", "MongoDB", "MERN"],
   },
   {
     date: "December 2022",
