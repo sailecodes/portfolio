@@ -2,7 +2,7 @@ import { FaLinkedin, FaTelegramPlane, FaGithub } from "react-icons/fa";
 
 import "../../assets/sass/main.scss";
 import catGif from "../../assets/gifs/cat-gif.gif";
-import { projects_new } from "../../data/projects";
+import projects from "../../data/projects";
 
 const Main = () => {
   return (
@@ -58,7 +58,7 @@ const Main = () => {
         <section className="main--projects">
           <header className="main--section-header">Projects</header>
           <div>
-            {projects_new.map((project, ind) => (
+            {projects.map((project, ind) => (
               <Project
                 key={ind}
                 date={project.date}
