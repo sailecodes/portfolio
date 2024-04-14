@@ -5,7 +5,17 @@ export const projects = [
     links: ["https://github.com/sailecodes/shoe-szn", "#"],
     intro: "An e-commerce website that provides consumers with shoes handpicked by the community.",
     description: "This is an ongoing project that will enable me to further understand e-commerce applications.",
-    skills: ["React.js", "Node.js", "Express.js", "styled-components", "MongoDB", "MERN", "E-commerce Application"],
+    skills: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "Sass",
+      "PostgreSQL",
+      "GraphQL",
+      "Apollo",
+      "PERN",
+      "E-commerce Application",
+    ],
   },
   {
     date: "November 2023",
