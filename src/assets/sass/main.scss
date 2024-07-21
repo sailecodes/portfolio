@@ -74,7 +74,6 @@
 .main--about {
   position: relative;
 
-  padding-top: 4rem;
   margin-bottom: 12rem;
 }
 
@@ -106,12 +105,50 @@
 }
 
 // --------------------
+// -------------------- SECTION: EXPERIENCE
+// --------------------
+
+.main--experience {
+  margin-bottom: 12rem;
+}
+
+.main--experience-experience-date {
+  color: vars.$color-gray;
+
+  font-size: vars.$font-regular-sm-1;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  margin-bottom: 0.2rem;
+}
+
+.main--experience-experience-position {
+  color: vars.$color-white;
+
+  font-size: vars.$font-subheading-sm-1;
+  font-weight: 600;
+
+  margin-bottom: 1.2rem;
+}
+
+.main--experience-experience-description {
+  color: vars.$color-gray;
+
+  font-size: vars.$font-regular-sm-2;
+  font-weight: 500;
+  line-height: 2.8rem;
+}
+
+.main--experience > div > div {
+  margin-bottom: 4rem;
+}
+
+// --------------------
 // -------------------- SECTION: PROJECTS
 // --------------------
 
 .main--projects {
-  padding-top: 4rem;
-  margin-bottom: 16rem;
+  margin-bottom: 12rem;
 }
 
 .main--projects-project {
@@ -265,12 +302,7 @@
     max-width: 60rem;
   }
 
-  .main--about,
-  .main--projects {
-    padding-top: 0;
-  }
-
-  .main--projects {
+  .main--experience {
     margin-bottom: 12rem;
   }
 
