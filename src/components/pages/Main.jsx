@@ -10,7 +10,7 @@ const Main = () => {
     <main className="main">
       <div className="main--left-half">
         <section className="main--hero">
-          <p className="main--hero-greetings">Hi, I&apos;m Elias 👋</p>
+          <p className="main--hero-greetings">Hey, I&apos;m Elias 👋</p>
           <p className="main--hero-tagline">
             an aspiring software engineer with a passion to use software as a medium to help others.
           </p>
@@ -26,23 +26,23 @@ const Main = () => {
         <section className="main--about">
           <header className="main--section-header">About me</header>
           <p>
-            I&apos;m a CS graduate from UC San Diego with a firm understanding of fundamental CS principles, such as{" "}
-            <span>algorithms</span>, <span>data structures</span>, and <span>software development </span>
+            I&apos;m a CS graduate from UC San Diego with a firm understanding of fundamental CS principles, such as
+            <span> algorithms</span>, <span>data structures</span>, and <span>software development </span>
             practices. Moreover, I&apos;ve extensive experience in <span>code documentation</span>,
             <span> version control</span>, <span>collaborative team projects</span>, <span>agile methodologies</span>,
-            and several languages, such as
-            <span> Java</span> and <span>JavaScript</span>.
+            and several languages, such as <span> Java</span> and <span>Python</span>.
           </p>
           <p>
-            I&apos;ve also tackled various personal projects that focus on <span>full-stack development</span>. Most are
+            I&apos;ve tackled various personal projects that focus on <span>full-stack development</span>. Most are
             built using the <span>MERN Stack</span>, in which I use multiple frameworks and packages, including
-            <span> React Query</span>, <span>React Router Dom</span>, and <span>Sass</span>. In addition, I&apos;ve
-            hosted <span>Postgres</span> databases on Railway, especially for my project Shoe Szn.
+            <span> React Query</span>, <span>React Router Dom</span>, and <span>Sass</span>, but I&apos;ve also
+            developed applications with other technologies and tools, such as <span>TypeScript</span>,
+            <span> PostgreSQL</span>, and <span>GraphQL</span>.
           </p>
           <p>
             When it comes to non-techy things, I enjoy <span>eating food</span>, <span>playing volleyball</span>, and
-            <span> spending time with friends and family</span>. At home, I find comfort in my
-            <span> adorable, shy cat</span> named Nori!
+            <span> spending time with friends and family</span>. At home, I find comfort in my two Tabby cats: a shy,
+            fluffy boy named <span>Nori</span> and a mischievous, curious girl called <span>Moka</span>.
           </p>
           <img src={catGif} alt="Animated cat massaging another cat" />
         </section>

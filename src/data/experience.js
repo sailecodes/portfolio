@@ -1,7 +1,7 @@
 const experience = [
   {
-    date: "Present",
-    position: "IT Specialist and Electrician",
+    date: "May 2024 - September 2024",
+    position: "IT and Electrician",
     company: "Power Communications",
     description:
       "Ran and terminated network cables and fiber for multiple data and access points, installed an Algo intercom system with 8198, 1198, 8196, and 1196 speakers controlled by an 8103 pager and accessed through Zoom VoIP, configured a server composed of a virtual domain controller, data server and application server.",

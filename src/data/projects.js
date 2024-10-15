@@ -1,8 +1,8 @@
 export const projects = [
   {
-    date: "Present",
+    date: "January 2024 - Present",
     title: "Shoe Szn",
-    links: ["https://github.com/sailecodes/shoe-szn", "#"],
+    links: ["https://github.com/sailecodes/shoe-szn", "https://shoeszn.up.railway.app/"],
     intro: "An e-commerce website that provides consumers with shoes handpicked by the community.",
     description: "This is an ongoing project that will enable me to further understand e-commerce applications.",
     skills: [
@@ -18,7 +18,7 @@ export const projects = [
     ],
   },
   {
-    date: "November 2023",
+    date: "November 2023 - January 2024",
     title: "InstaIV",
     links: ["https://github.com/sailecodes/instaiv", "https://instaiv.up.railway.app/"],
     intro: "A social media application based on Instagram's design and basic functionalities.",
@@ -36,7 +36,7 @@ export const projects = [
     ],
   },
   {
-    date: "October 2023",
+    date: "November 2023 - December 2023",
     title: "TodoIV",
     links: ["https://github.com/sailecodes/todoiv", "#"],
     intro: "A to-do list application for organizing various tasks.",
@@ -45,7 +45,7 @@ export const projects = [
     skills: ["React.js", "Node.js", "Express.js", "styled-components", "MongoDB", "MERN"],
   },
   {
-    date: "December 2022",
+    date: "September 2022 - December 2022",
     title: "Birds of a Feather",
     links: ["https://github.com/CSE-110-Winter-2022/birds-of-a-feather-team-29", "#"],
     intro: "An Android application that allows students to connect with one another based on classes.",
